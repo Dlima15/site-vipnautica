@@ -1,0 +1,24 @@
+{
+  "name": "site-vipnautica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dlima15/site-vipnautica.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Dlima15/site-vipnautica/issues"
+  },
+  "homepage": "https://github.com/Dlima15/site-vipnautica#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
