@@ -1,1 +1,69 @@
-/* Estilos globais */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Poltawski+Nowy&display=swap');
+/* zerador de css*/
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0
+}
+
+.body{
+    margin: 0;
+}
+
+header{
+    background-color: #010649;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 119px;
+    font-family: poppins;
+}
+
+header img{
+    height: 70px;
+}
+
+.menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu img{
+    height: 20px;
+}
+
+.buttons-header a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.bt-hd-1{
+    background-color: #EEA800;
+}
+
+.bt-hd-2{
+    background-color: #58B660;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxx capa do site xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+  /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
