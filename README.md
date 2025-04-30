@@ -1,6 +1,1 @@
-# VIP-Nautica
-# site-vipnautica
-# site-vipnautica
-# site-vipnautica
-# site-vipnautica
-# site-vipnautica
+# VIP-Nautica site
