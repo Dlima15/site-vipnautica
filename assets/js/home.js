@@ -1,5 +1,18 @@
 // JS da Home
+// Funcionalidade pra rodar os cards do seminovos
 
-// capa do site abaixo 
+  const container = document.querySelector('.carousel-container');
+  const next = document.querySelector('.carousel-btn.next');
+  const prev = document.querySelector('.carousel-btn.prev');
 
-// fim capa do site xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  next.addEventListener('click', () => {
+    container.scrollBy({ left: 320, behavior: 'smooth' });
+  });
+
+  prev.addEventListener('click', () => {
+    container.scrollBy({ left: -320, behavior: 'smooth' });
+  });
+
+
+// fim da funionalidade
+
