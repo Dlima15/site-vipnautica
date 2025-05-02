@@ -1,31 +1,74 @@
-<!-- Página inicial -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Home</title>
-   <link rel="stylesheet" href="./assets/css/style.css">
-   <script src="./assets/js/home.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Poltawski+Nowy&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Seu CSS personalizado -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- Scripts Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-   <header>
-     <img src="./assets/img/LOGOVIP.png" alt="logo VUIP Náutica">
-     <nav class="menu">
-        <ul>
-           <li><a href="#"><img src="./assets/img/icon header.svg" alt="Barcos Novos"> Barcos Novos |</a></li>
-               <li><a href="#"><img src="./assets/img/icon header.svg" alt="Barcos Seminovos"> Barcos Seminovos |</a></li>
-               <li><a href="#"><img src="./assets/img/email contato.svg" alt="Contato"> Contato |</a></li>
-               <li><a href="#">Sobre nós</a></li>
-        </ul>
-     </nav>
-     <div class="buttons-header">
-        <a class="bt-hd-1" href="">Venda sua Lancha!</a>
-        <a class="bt-hd-2" href="">Fale conosco!</a>
-     </div>
-   </header>
-   <section class="capa">
-    
-   </section>
+  <!-- Header -->
+  <header>
+    <img src="./assets/img/LOGOVIP.png" alt="Logo VUIP Náutica" />
+
+    <nav class="menu">
+      <ul>
+        <li><a href="#"><img src="./assets/img/icon header.svg" alt=""> Barcos Novos |</a></li>
+        <li><a href="#"><img src="./assets/img/icon header.svg" alt=""> Barcos Seminovos |</a></li>
+        <li><a href="#"><img src="./assets/img/email contato.svg" alt=""> Contato |</a></li>
+        <li><a href="#">Sobre nós</a></li>
+      </ul>
+    </nav>
+
+    <div class="buttons-header">
+      <a class="bt-hd-1" href="#">Venda sua Lancha!</a>
+      <a class="bt-hd-2" href="#">Fale conosco!</a>
+    </div>
+  </header>
+
+  <!-- Capa com Carrossel -->
+  <section class="capa">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="./assets/img/capa1.png" alt="Primeiro Slide" />
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./assets/img/capa2.png" alt="Segundo Slide" />
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./assets/img/capa3.png" alt="Terceiro Slide" />
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+    </div>
+  </section>
 </body>
 </html>
