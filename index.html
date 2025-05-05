@@ -20,6 +20,13 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
 </head>
 <body>
   <!-- Header -->
@@ -28,10 +35,10 @@
 
     <nav class="menu">
       <ul>
-        <li><a href="#"><img src="./assets/img/icon header.svg" alt=""> Barcos Novos |</a></li>
-        <li><a href="#"><img src="./assets/img/icon header.svg" alt=""> Barcos Seminovos |</a></li>
-        <li><a href="#"><img src="./assets/img/email contato.svg" alt=""> Contato |</a></li>
-        <li><a href="#">Sobre nós</a></li>
+        <li><a href="#novos"><img src="./assets/img/icon header.svg" alt=""> Barcos Novos |</a></li>
+        <li><a href="#seminovos"><img src="./assets/img/icon header.svg" alt=""> Barcos Seminovos |</a></li>
+        <li><a href="#contato"><img src="./assets/img/email contato.svg" alt=""> Contato |</a></li>
+        <li><a href="#sobre-nos">Sobre nós</a></li>
       </ul>
     </nav>
 
@@ -72,7 +79,7 @@
       </a>
     </div>
   </section>
-  <section class="carrosel-barcos">
+  <section id="seminovos" class="carrosel-barcos">
     <h2>Seminovos</h2>
     <div class="line"></div>
     <div class="carrossel-container">
@@ -192,7 +199,7 @@
       <a class="button-seminovos" href="./pages/filtros.html">Ver todas embarcações Seminovas</a>
     </div>  
   </section>
-  <section class="carrosel-barcos">
+  <section id="novos" class="carrosel-barcos">
     <div class="line"></div>
     <h2>Novos</h2>
     <div class="carrossel-container">
@@ -312,7 +319,7 @@
       <a class="button-seminovos" href="./pages/filtros.html">Ver todas embarcações Novas</a>
     </div>  
   </section>
-  <section class="empresa">
+  <section id="sobre-nos" class="empresa">
     <div class="empresa-topo">
       <div class="empresa-logo">
         <img src="./assets/img/1-Logomarca VIP Azul.png" alt="Logo VIP Náutica" />
@@ -346,7 +353,7 @@
       </div>
     </div>
   </section>
-  <footer class="footer">
+  <footer id="contato" class="footer">
     <div class="footer-container">
       <!-- LOGO -->
       <div class="footer-logo">

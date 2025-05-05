@@ -460,3 +460,9 @@
       }
     }
     
+
+    /* scrol automatico*/
+
+    section, footer, aside {
+      scroll-margin-top: 100px; /* Ajuste conforme a altura do header */
+    }
