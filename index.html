@@ -13,6 +13,8 @@
 
   <!-- Seu CSS personalizado -->
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <script src="./assets/js/home.js"></script>
+  
 
   <!-- Scripts Bootstrap -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -71,120 +73,240 @@
     </div>
   </section>
   <section class="carrosel-barcos">
-   <h2>Seminovos</h2>
-   <div class="line"></div>
-   <button class="carousel-btn prev">&#10094;</button>
-   <div class="carousel-container">
-     <div class="card-barco">
-       <img src="./assets/img/barco1.jpeg" alt="Ferretti 50">
-       <div class="info">
-         <p class="sku">SKU #3538</p>
-         <h3>Ferretti 50</h3>
-         <p>2 x Volvo D6 IPS 600</p>
-         <p class="preco">R$ 3.000.000</p>
-         <div class="line-detalhes"></div>
-         <div class="detalhes">
-           <span><strong>Tamanho</strong><br>42 Pés</span>
-           <span><strong>Ano</strong><br>2021</span>
-           <span><strong>Horas</strong><br>400h</span>
-           <span><strong>Combustível</strong><br>Diesel</span>
-         </div>
-       </div>
-     </div>
- 
-     <div class="card-barco">
-       <img src="./assets/img/barco1.jpeg" alt="Sessa F-42">
-       <div class="info">
-         <p class="sku">SKU #3538</p>
-         <h3>Sessa F-42</h3>
-         <p>2 x Volvo D6 IPS 600</p>
-         <p class="preco">R$ 3.800.000</p>
-         <div class="line-detalhes"></div>
-         <div class="detalhes">
-           <span><strong>Tamanho</strong><br>42 Pés</span>
-           <span><strong>Ano</strong><br>2021</span>
-           <span><strong>Horas</strong><br>400h</span>
-           <span><strong>Combustível</strong><br>Diesel</span>
-         </div>
-       </div>
-     </div>
- 
-     <div class="card-barco">
-       <img src="./assets/img/barco1.jpeg" alt="Intermarine 60">
-       <div class="info">
-         <p class="sku">SKU #3538</p>
-         <h3>Intermarine 60</h3>
-         <p>2 x Volvo D6 IPS 600</p>
-         <p class="preco">R$ 6.000.000</p>
-         <div class="line-detalhes"></div>
-         <div class="detalhes">
-           <span><strong>Tamanho</strong><br>42 Pés</span>
-           <span><strong>Ano</strong><br>2021</span>
-           <span><strong>Horas</strong><br>400h</span>
-           <span><strong>Combustível</strong><br>Diesel</span>
-         </div>
-       </div>
-     </div>
-   </div>
-   <button class="carousel-btn next">&#10095;</button>
- </section>
- <section class="carrosel-barcos">
-   <h2>Novos</h2>
-   <div class="line"></div>
-   <button class="carousel-btn prev">&#10094;</button>
-   <div class="carousel-container">
-     <div class="card-barco">
-       <img src="./assets/img/barco1.jpeg" alt="Ferretti 50">
-       <div class="info">
-         <p class="sku">SKU #3538</p>
-         <h3>Ferretti 50</h3>
-         <p class="motor">2 x Volvo D6 IPS 600</p>
-         <p class="preco">R$ 3.000.000</p>
-         <div class="line-detalhes"></div>
-         <div class="detalhes">
-           <span><strong>Tamanho</strong><br>42 Pés</span>
-           <span><strong>Ano</strong><br>2021</span>
-           <span><strong>Horas</strong><br>400h</span>
-           <span><strong>Combustível</strong><br>Diesel</span>
-         </div>
-       </div>
-     </div>
- 
-     <div class="card-barco">
-       <img src="./assets/img/barco1.jpeg" alt="Sessa F-42">
-       <div class="info">
-         <p class="sku">SKU #3538</p>
-         <h3>Sessa F-42</h3>
-         <p>2 x Volvo D6 IPS 600</p>
-         <p class="preco">R$ 3.800.000</p>
-         <div class="line-detalhes"></div>
-         <div class="detalhes">
-           <span><strong>Tamanho</strong><br>42 Pés</span>
-           <span><strong>Ano</strong><br>2021</span>
-           <span><strong>Horas</strong><br>400h</span>
-           <span><strong>Combustível</strong><br>Diesel</span>
-         </div>
-       </div>
-     </div>
- 
-     <div class="card-barco">
-       <img src="./assets/img/barco1.jpeg" alt="Intermarine 60">
-       <div class="info">
-         <p class="sku">SKU #3538</p>
-         <h3>Intermarine 60</h3>
-         <p>2 x Volvo D6 IPS 600</p>
-         <p class="preco">R$ 6.000.000</p>
-         <div class="line-detalhes"></div>
-         <div class="detalhes">
-           <span><strong>Tamanho</strong><br>42 Pés</span>
-           <span><strong>Ano</strong><br>2021</span>
-           <span><strong>Horas</strong><br>400h</span>
-           <span><strong>Combustível</strong><br>Diesel</span>
-         </div>
-       </div>
-     </div>
-   </div>
-   <button class="carousel-btn next">&#10095;</button>
- </section>
+    <h2>Seminovos</h2>
+    <div class="line"></div>
+    <div class="carrossel-container">
+      <button class="btn-nav left" onclick="scrollCarousel(-1)">&#10094;</button>
+      
+      <div class="carrossel" id="carrossel">
+        <!-- Cards de Barcos -->
+        <div class="card-barco">
+          <img src="./assets/img/barco1.jpeg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #3538</p>
+            <h3>Ferretti 50</h3>
+            <p class="motor">2 x Volvo D6 IPS 600</p>
+            <p class="preco">R$ 3.000.000</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>42 Pés</span>
+              <span><strong>Ano</strong><br>2021</span>
+              <span><strong>Horas</strong><br>400h</span>
+              <span><strong>Combustível</strong><br>Diesel</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Copie e cole mais 5 cards iguais acima -->
+        <!-- Substitua os dados se quiser, pra diferenciar -->
+  
+        <div class="card-barco"> <!-- Card 2 -->
+          <img src="./assets/img/barco1.jpeg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #3539</p>
+            <h3>Azimut 60</h3>
+            <p class="motor">2 x MAN V8 1000HP</p>
+            <p class="preco">R$ 4.500.000</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>60 Pés</span>
+              <span><strong>Ano</strong><br>2022</span>
+              <span><strong>Horas</strong><br>300h</span>
+              <span><strong>Combustível</strong><br>Diesel</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card-barco"> <!-- Card 3 -->
+          <img src="./assets/img/barco1.jpeg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #3540</p>
+            <h3>Phantom 400</h3>
+            <p class="motor">2 x Volvo Penta 320HP</p>
+            <p class="preco">R$ 1.200.000</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>40 Pés</span>
+              <span><strong>Ano</strong><br>2020</span>
+              <span><strong>Horas</strong><br>500h</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card-barco"> <!-- Card 4 -->
+          <img src="./assets/img/barco1.jpeg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #3541</p>
+            <h3>Intermarine 60</h3>
+            <p class="motor">2 x CAT 1150HP</p>
+            <p class="preco">R$ 5.000.000</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>60 Pés</span>
+              <span><strong>Ano</strong><br>2023</span>
+              <span><strong>Horas</strong><br>200h</span>
+              <span><strong>Combustível</strong><br>Diesel</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card-barco"> <!-- Card 5 -->
+          <img src="./assets/img/barco1.jpeg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #3542</p>
+            <h3>Schaefer V33</h3>
+            <p class="motor">2 x Mercury 300HP</p>
+            <p class="preco">R$ 1.000.000</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>33 Pés</span>
+              <span><strong>Ano</strong><br>2019</span>
+              <span><strong>Horas</strong><br>600h</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card-barco"> <!-- Card 6 -->
+          <img src="./assets/img/barco1.jpeg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #3543</p>
+            <h3>NX 340</h3>
+            <p class="motor">2 x Yamaha 250HP</p>
+            <p class="preco">R$ 950.000</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>34 Pés</span>
+              <span><strong>Ano</strong><br>2018</span>
+              <span><strong>Horas</strong><br>700h</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <button class="btn-nav right" onclick="scrollCarousel(1)">&#10095;</button>
+    </div>
+  </section>
+  <section class="carrosel-barcos">
+    <h2>Novos</h2>
+    <div class="line"></div>
+    <div class="carrossel-container">
+      <button class="btn-nav left" onclick="scrollCarousel(-1)">&#10094;</button>
+      
+      <div class="carrossel" id="carrossel">
+        <!-- Cards de Barcos -->
+        <div class="card-barco">
+          <img src="./assets/img/barco1.jpeg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #3538</p>
+            <h3>Ferretti 50</h3>
+            <p class="motor">2 x Volvo D6 IPS 600</p>
+            <p class="preco">R$ 3.000.000</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>42 Pés</span>
+              <span><strong>Ano</strong><br>2021</span>
+              <span><strong>Horas</strong><br>400h</span>
+              <span><strong>Combustível</strong><br>Diesel</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Copie e cole mais 5 cards iguais acima -->
+        <!-- Substitua os dados se quiser, pra diferenciar -->
+  
+        <div class="card-barco"> <!-- Card 2 -->
+          <img src="./assets/img/barco1.jpeg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #3539</p>
+            <h3>Azimut 60</h3>
+            <p class="motor">2 x MAN V8 1000HP</p>
+            <p class="preco">R$ 4.500.000</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>60 Pés</span>
+              <span><strong>Ano</strong><br>2022</span>
+              <span><strong>Horas</strong><br>300h</span>
+              <span><strong>Combustível</strong><br>Diesel</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card-barco"> <!-- Card 3 -->
+          <img src="./assets/img/barco1.jpeg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #3540</p>
+            <h3>Phantom 400</h3>
+            <p class="motor">2 x Volvo Penta 320HP</p>
+            <p class="preco">R$ 1.200.000</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>40 Pés</span>
+              <span><strong>Ano</strong><br>2020</span>
+              <span><strong>Horas</strong><br>500h</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card-barco"> <!-- Card 4 -->
+          <img src="./assets/img/barco1.jpeg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #3541</p>
+            <h3>Intermarine 60</h3>
+            <p class="motor">2 x CAT 1150HP</p>
+            <p class="preco">R$ 5.000.000</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>60 Pés</span>
+              <span><strong>Ano</strong><br>2023</span>
+              <span><strong>Horas</strong><br>200h</span>
+              <span><strong>Combustível</strong><br>Diesel</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card-barco"> <!-- Card 5 -->
+          <img src="./assets/img/barco1.jpeg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #3542</p>
+            <h3>Schaefer V33</h3>
+            <p class="motor">2 x Mercury 300HP</p>
+            <p class="preco">R$ 1.000.000</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>33 Pés</span>
+              <span><strong>Ano</strong><br>2019</span>
+              <span><strong>Horas</strong><br>600h</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card-barco"> <!-- Card 6 -->
+          <img src="./assets/img/barco1.jpeg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #3543</p>
+            <h3>NX 340</h3>
+            <p class="motor">2 x Yamaha 250HP</p>
+            <p class="preco">R$ 950.000</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>34 Pés</span>
+              <span><strong>Ano</strong><br>2018</span>
+              <span><strong>Horas</strong><br>700h</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <button class="btn-nav right" onclick="scrollCarousel(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <script defer src="./assets/js/home.js"></script>
 </body>
 </html>

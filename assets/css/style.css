@@ -145,136 +145,102 @@
 
   /* seminovos*/
 
-
-.seminovos{
-  margin-top: 15px;
-}
-
-.seminovos h2{
-    text-align: center;
-    font-weight: bold;
-    color: #010649;
-}
-
-.carrosel-barcos .line {
-  width: 70%;
-  height: 1px;
-  background-color: #010649;
-  margin: 0 auto 30px auto;
-  border-radius: 5px;
-}
-
-.carrosel-barcos {
-  position: relative;
-  background-color: #f3f3f3;
-  padding: 40px 0;
-  overflow: hidden;
-  text-align: center;
-}
-
-.carrosel-barcos h2{
-  font-size: 28px;
-  color: #010649;
-  margin-bottom: 10px;
-}
-
-.carousel-container{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 0 60px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.card-barco {
-  margin-left: 100px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  min-width: 300px;
-  max-width: 300px;
-  flex-shrink: 0;
-}
-
-.card-barco img {
-  width: 100%;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card-barco .info {
-  padding: 15px;
-  text-align: center;
-}
-
-.card-barco .sku {
-  font-size: 12px;
-  color: #666;
-}
-
-.card-barco h3 {
-  font-family: Poltawski Nowy;
-  font-size: 30px;
-  color: #010649;
-  margin: 5px 0;
-}
-
-.motor{
-  color: #010649;
-}
+  .carrosel-barcos{
+    margin-top: 15px;
+  }
+  
+  .carrosel-barcos h2{
+      text-align: center;
+      font-weight: bold;
+      color: #010649;
+  }
+  
+  .carrosel-barcos .line {
+    width: 70%;
+    height: 1px;
+    background-color: #010649;
+    margin: 0 auto 30px auto;
+    border-radius: 5px;
+  }
 
 
-.card-barco .preco {
-  font-size: 18px;
-  font-weight: bold;
-  color: #010649;
-  margin: 10px 0;
-}
-
-.line-detalhes{
-  width: 100%;
-  height: 1px;
-  background-color: #010649;
-  margin: 0 auto 30px auto;
-  border-radius: 5px;
-}
-
-.card-barco .detalhes {
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-  color: #3f2c01;
-  margin-top: 10px;
-}
-
-.card-barco .detalhes span {
-  text-align: center;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: white;
-  border: none;
-  font-size: 30px;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 2;
-  border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
-}
-
-.carousel-btn:hover {
-  background-color: #ddd;
-}
-
-.carousel-btn.prev {
-  left: 10px;
-}
-
-.carousel-btn.next {
-  right: 10px;
-}
+  .carrossel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 40px auto;
+    overflow: hidden;
+  }
+  
+  .carrossel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+  }
+  
+  .card-barco {
+    min-width: calc((100% / 3) - 20px);
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .card-barco img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .info {
+    padding: 15px;
+  }
+  
+  .sku {
+    color: #888;
+    font-size: 0.9em;
+  }
+  
+  .motor, .preco {
+    margin: 5px 0;
+  }
+  
+  .line-detalhes {
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+  }
+  
+  .detalhes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.85em;
+  }
+  
+  .detalhes span {
+    flex: 1 1 45%;
+  }
+  
+  .btn-nav {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.9);
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+  }
+  
+  .btn-nav.left {
+    left: 10px;
+  }
+  
+  .btn-nav.right {
+    right: 10px;
+  }
+  
