@@ -244,3 +244,120 @@
     right: 10px;
   }
   
+.button-ft-sm{
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+  .button-ft-sm a{
+    background-color: #010649;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(1, 6, 73, 0.2);
+  }
+  
+  .button-seminovos:hover {
+    background-color: #0a1172;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(1, 6, 73, 0.4);
+    text-decoration: none;
+    color: #ffcc00;
+  }
+
+  .button-ft-nv{
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+  }
+  
+    .button-ft-nv a{
+      background-color: #010649;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 12px rgba(1, 6, 73, 0.2);
+    }
+    
+    .button-seminovos:hover {
+      background-color: #0a1172;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(1, 6, 73, 0.4);
+      text-decoration: none;
+      color: #ffcc00;
+    }
+
+    /* Aside seção */
+
+    .empresa {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    .empresa-topo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+    
+    .empresa-logo img {
+      max-width: 300px;
+      height: auto;
+    }
+    
+    .empresa-texto {
+      max-width: 600px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    .empresa-locais {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .card-local {
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 500px;
+      text-align: left;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00000010;
+    }
+    
+    .card-local h3 {
+      color: #001263;
+      font-size: 25px;
+      font-weight: 1000;
+      margin-bottom: 10px;
+    }
+    
+    .card-local p {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    
+    .card-local span {
+      font-size: 16px;
+      margin-right: 5px;
+    }
+    
+    .card-local img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+    
