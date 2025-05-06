@@ -1,0 +1,42 @@
+{
+    "sku": "3538",
+    "fabricante": "Intermarine",
+    "modelo": "Intermarine 60",
+    "ano": "2021",
+    "tamanho": "77’",
+    "estilo": "Fly",
+    "combustivel": "Diesel",
+    "motor": "2 x Volvo D-6 Ips 600",
+    "horas": "400",
+    "valor": "R$ 6.000.000",
+    "anuncio": "Intermarine 60 / 2021",
+    "fotos": [
+      "barco1.jpeg",
+      "barco2.jpeg",
+      "barco3.jpeg"
+    ],
+    "acessorios": [
+      "ar condicionado",
+      "boiler",
+      "bússolas",
+      "buzina",
+      "carregador de bateria",
+      "comando eletrônico",
+      "dir. hidráulica",
+      "estabilizador",
+      "fechamento total",
+      "flaps",
+      "fogão elétrico",
+      "geladeira",
+      "gerador",
+      "gps",
+      "grill elétrico",
+      "guincho",
+      "joystick",
+      "microondas",
+      "piso em teca",
+      "plataforma submergível",
+      "ploter",
+      "som"
+    ]
+  }

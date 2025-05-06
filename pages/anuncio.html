@@ -28,76 +28,50 @@
     </header>
     <section class="container-anuncio">
       <div class="anuncio">
-         <h1>Intermarine 60 / 2021</h1>
-   
-         <div class="carrossel-container">
-         <button class="btn-nav left">&#10094;</button>
-         <img src="../assets/img/barco1.jpeg" alt="Intermarine 60" class="foto-barco">
-         <button class="btn-nav right">&#10095;</button>
-         </div>
-   
-         <span class="sku">Sku 3538</span>
-   
-         <table class="info-barco">
-         <tr>
+        <h1 id="titulo-barco">Nome da Embarcação</h1>
+    
+        <div class="carrossel-container">
+          <button class="btn-nav left" onclick="mudarFoto(-1)">&#10094;</button>
+          <img id="foto-barco" src="" alt="Foto da embarcação" class="foto-barco">
+          <button class="btn-nav right" onclick="mudarFoto(1)">&#10095;</button>
+        </div>
+    
+        <span class="sku" id="sku"></span>
+    
+        <table class="info-barco">
+          <tr>
             <th>Fabricante</th>
-            <td>Intermarine</td>
+            <td id="fabricante"></td>
             <th>Modelo</th>
-            <td>Intermarine 60</td>
+            <td id="modelo"></td>
             <th>Ano</th>
-            <td>2021</td>
-         </tr>
-         <tr>
+            <td id="ano"></td>
+          </tr>
+          <tr>
             <th>Tamanho</th>
-            <td>77’</td>
+            <td id="tamanho"></td>
             <th>Estilo</th>
-            <td>Fly</td>
+            <td id="estilo"></td>
             <th>Combustível</th>
-            <td>Diesel</td>
-         </tr>
-         <tr>
+            <td id="combustivel"></td>
+          </tr>
+          <tr>
             <th>Motor</th>
-            <td>2 x Volvo D-6 Ips 600</td>
+            <td id="motor"></td>
             <th>Horas</th>
-            <td>400</td>
+            <td id="horas"></td>
             <th>Valor</th>
-            <td class="preco">R$ 6.000.000</td>
-         </tr>
-         </table>
-   
-         <h2>Acessórios</h2>
-         <div class="acessorios">
-         <ul>
-            <li>ar condicionado</li>
-            <li>boiler</li>
-            <li>bússolas</li>
-            <li>buzina</li>
-            <li>carregador de bateria</li>
-            <li>comando eletrônico</li>
-            <li>dir. hidráulica</li>
-            <li>estabilizador</li>
-            <li>fechamento total</li>
-            <li>flaps</li>
-            <li>fogão elétrico</li>
-         </ul>
-         <ul>
-            <li>geladeira</li>
-            <li>gerador</li>
-            <li>gps</li>
-            <li>grill elétrico</li>
-            <li>guincho</li>
-            <li>joystick</li>
-            <li>microondas</li>
-            <li>piso em teca</li>
-            <li>plataforma submergível</li>
-            <li>ploter</li>
-            <li>som</li>
-         </ul>
-         </div>
-   
-         <a href="https://wa.me/5511950010956" class="btn-consultar" target="_blank">📱 Consultar</a>
+            <td class="preco" id="valor"></td>
+          </tr>
+        </table>
+    
+        <h2>Acessórios</h2>
+        <div class="acessorios" id="acessorios"></div>
+    
+        <a href="https://wa.me/5511950010956" class="btn-consultar" target="_blank">📱 Consultar</a>
       </div>
-   </section>   
+    </section>
+    
    <section id="sobre-nos" class="empresa">
       <div class="empresa-topo">
         <div class="empresa-logo">
