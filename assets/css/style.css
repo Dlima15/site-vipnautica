@@ -466,3 +466,25 @@
     section, footer, aside {
       scroll-margin-top: 100px; /* Ajuste conforme a altura do header */
     }
+
+
+    /* zap */
+
+    .whatsapp-fixo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+    
+    .whatsapp-fixo img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    
+    .whatsapp-fixo img:hover {
+      transform: scale(1.1);
+    }
