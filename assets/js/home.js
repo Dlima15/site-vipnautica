@@ -1,11 +1,10 @@
 // JS da Home
 // Funcionalidade pra rodar os cards do seminovos
-function scrollCarousel(direction) {
-  const carrossel = document.getElementById("carrossel");
-  const cardWidth = carrossel.querySelector(".card-barco").offsetWidth + 20;
-  carrossel.scrollBy({ left: cardWidth * direction, behavior: "smooth" });
+function scrollCarousel(carrosselId, direction) {
+  const carousel = document.getElementById(carrosselId);
+  const scrollAmount = 300; // ajuste conforme necessário
+  carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
 }
-
 
 // fim da funionalidade
  
