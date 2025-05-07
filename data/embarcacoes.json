@@ -1,6 +1,5 @@
-[
-  {
-    "sku": "3538",
+{
+  "3538": {
     "fabricante": "Intermarine",
     "modelo": "Intermarine 60",
     "ano": "2021",
@@ -47,8 +46,7 @@
       "som"
     ]
   },
-  {
-    "sku": "4550",
+  "4550": {
     "fabricante": "Azimut",
     "modelo": "Azimut 56",
     "ano": "2019",
@@ -83,4 +81,4 @@
       "plataforma submergível"
     ]
   }
-]
+}
