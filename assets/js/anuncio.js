@@ -70,9 +70,7 @@ fetch("../data/embarcacoes.json")
     document.querySelector('.seta-direita').title = `SKU ${barco.sku}`;
 
     fotos = barco.fotos;
-    console.log(fotos);
-
-    mostrarFoto(fotoIndex);
+    mostrarFoto(fotoIndex);  
 
     const acessoriosContainer = document.getElementById('acessorios');
     const metade = Math.ceil(barco.acessorios.length / 2);
@@ -88,4 +86,6 @@ fetch("../data/embarcacoes.json")
     acessoriosContainer.appendChild(ul1);
     acessoriosContainer.appendChild(ul2);
   })
+
+ 
   .catch(err => console.error("Erro ao carregar JSON:", err));
