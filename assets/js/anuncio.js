@@ -19,83 +19,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
   // função que puxha os dados do json
 
-  let fotoIndex = 0;
+// Pega o SKU direto da URL (?sku=12345)
+const urlParams = new URLSearchParams(window.location.search);
+const sku = urlParams.get("sku");
+
+// Carrossel de fotos
+let fotoIndex = 0;
 let fotos = [];
-
-fetch('../../data/embarcacoes.json')
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById('titulo-barco').textContent = data.anuncio;
-    document.getElementById('sku').textContent = `SKU ${data.sku}`;
-    document.getElementById('fabricante').textContent = data.fabricante;
-    document.getElementById('modelo').textContent = data.modelo;
-    document.getElementById('ano').textContent = data.ano;
-    document.getElementById('tamanho').textContent = data.tamanho;
-    document.getElementById('estilo').textContent = data.estilo;
-    document.getElementById('combustivel').textContent = data.combustivel;
-    document.getElementById('motor').textContent = data.motor;
-    document.getElementById('horas').textContent = data.horas;
-    document.getElementById('valor').textContent = data.valor;
-
-    // Carregar fotos
-    fotos = data.fotos;
-    mostrarFoto(fotoIndex);
-
-    // Carregar acessórios (2 colunas)
-    const acessoriosContainer = document.getElementById('acessorios');
-    const metade = Math.ceil(data.acessorios.length / 2);
-    const ul1 = document.createElement('ul');
-    const ul2 = document.createElement('ul');
-
-    data.acessorios.forEach((item, index) => {
-      const li = document.createElement('li');
-      li.textContent = item;
-      index < metade ? ul1.appendChild(li) : ul2.appendChild(li);
-    });
-
-    acessoriosContainer.appendChild(ul1);
-    acessoriosContainer.appendChild(ul2);
-  })
-  .catch(err => console.error('Erro ao carregar JSON:', err));
-
-// Função para trocar fotos
-
 
 function mostrarFoto(index) {
   const img = document.getElementById('foto-barco');
   if (fotos.length > 0) {
     img.classList.remove('visible');
-
     setTimeout(() => {
       img.src = fotos[index];
-
-      img.onload = () => {
-        img.classList.add('visible');
-      };
+      img.onload = () => img.classList.add('visible');
     }, 200);
   }
 }
 
 function mudarFoto(direcao) {
   fotoIndex += direcao;
-
-  // Corrige ciclo infinito
-  if (fotoIndex < 0) {
-    fotoIndex = fotos.length - 1;
-  } else if (fotoIndex >= fotos.length) {
-    fotoIndex = 0;
-  }
-
+  if (fotoIndex < 0) fotoIndex = fotos.length - 1;
+  else if (fotoIndex >= fotos.length) fotoIndex = 0;
   mostrarFoto(fotoIndex);
 }
 
-
-/* sku url automatico */
-
-// Pegando o SKU da URL
-const urlParams = new URLSearchParams(window.location.search);
-const sku = urlParams.get("sku");
-
+// Busca os dados da embarcação
 fetch("../data/embarcacoes.json")
   .then(res => res.json())
   .then(dados => {
@@ -105,16 +55,37 @@ fetch("../data/embarcacoes.json")
       return;
     }
 
-    // Exibe as informações do barco
     document.getElementById("titulo-barco").innerText = barco.anuncio;
+    document.getElementById("sku").innerText = `SKU ${barco.sku}`;
     document.getElementById("modelo").innerText = barco.modelo;
-    // ... continue com outras infos ...
+    document.getElementById("ano").innerText = barco.ano;
+    document.getElementById("tamanho").innerText = barco.tamanho;
+    document.getElementById("estilo").innerText = barco.estilo;
+    document.getElementById("combustivel").innerText = barco.combustivel;
+    document.getElementById("motor").innerText = barco.motor;
+    document.getElementById("horas").innerText = barco.horas;
+    document.getElementById("valor").innerText = barco.valor;
 
-    // Configura as fotos
-    window.fotos = barco.fotos;
-    window.fotoIndex = 0;
-    mostrarFoto(fotoIndex); // função que você já tem
+    document.querySelector('.seta-esquerda').title = `SKU ${barco.sku}`;
+    document.querySelector('.seta-direita').title = `SKU ${barco.sku}`;
+
+    fotos = barco.fotos;
+    console.log(fotos);
+
+    mostrarFoto(fotoIndex);
+
+    const acessoriosContainer = document.getElementById('acessorios');
+    const metade = Math.ceil(barco.acessorios.length / 2);
+    const ul1 = document.createElement('ul');
+    const ul2 = document.createElement('ul');
+
+    barco.acessorios.forEach((item, index) => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      index < metade ? ul1.appendChild(li) : ul2.appendChild(li);
+    });
+
+    acessoriosContainer.appendChild(ul1);
+    acessoriosContainer.appendChild(ul2);
   })
-  .catch(err => {
-    console.error("Erro ao carregar JSON:", err);
-  });
+  .catch(err => console.error("Erro ao carregar JSON:", err));

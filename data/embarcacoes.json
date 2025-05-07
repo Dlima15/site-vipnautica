@@ -1,4 +1,5 @@
-{
+[
+  {
     "sku": "3538",
     "fabricante": "Intermarine",
     "modelo": "Intermarine 60",
@@ -11,15 +12,15 @@
     "valor": "R$ 6.000.000",
     "anuncio": "Intermarine 60 / 2021",
     "fotos": [
-     "/assets/img/embarcacoes/sessaf42/1.jpeg",
-     "/assets/img/embarcacoes/sessaf42/2 (1).jpeg",
-     "/assets/img/embarcacoes/sessaf42/2 (2).jpeg",
-     "/assets/img/embarcacoes/sessaf42/2 (3).jpeg",
-     "/assets/img/embarcacoes/sessaf42/2 (4).jpeg",
-     "/assets/img/embarcacoes/sessaf42/2 (5).jpeg",
-     "/assets/img/embarcacoes/sessaf42/2 (6).jpeg",
-     "/assets/img/embarcacoes/sessaf42/2 (7).jpeg",
-     "/assets/img/embarcacoes/sessaf42/2 (2).jpeg"
+      "/assets/img/embarcacoes/sessaf42/1.jpeg",
+      "/assets/img/embarcacoes/sessaf42/2 (1).jpeg",
+      "/assets/img/embarcacoes/sessaf42/2 (2).jpeg",
+      "/assets/img/embarcacoes/sessaf42/2 (3).jpeg",
+      "/assets/img/embarcacoes/sessaf42/2 (4).jpeg",
+      "/assets/img/embarcacoes/sessaf42/2 (5).jpeg",
+      "/assets/img/embarcacoes/sessaf42/2 (6).jpeg",
+      "/assets/img/embarcacoes/sessaf42/2 (7).jpeg",
+      "/assets/img/embarcacoes/sessaf42/2 (8).jpeg"
     ],
     "acessorios": [
       "ar condicionado",
@@ -45,4 +46,41 @@
       "ploter",
       "som"
     ]
+  },
+  {
+    "sku": "4550",
+    "fabricante": "Azimut",
+    "modelo": "Azimut 56",
+    "ano": "2019",
+    "tamanho": "56’",
+    "estilo": "Flybridge",
+    "combustivel": "Diesel",
+    "motor": "2 x MAN V8 800HP",
+    "horas": "520",
+    "valor": "R$ 5.300.000",
+    "anuncio": "Azimut 56 / 2019",
+    "fotos": [
+      "/assets/img/embarcacoes/sessaf42/1.jpeg",
+      "/assets/img/embarcacoes/sessaf42/2 (1).jpeg",
+      "/assets/img/embarcacoes/sessaf42/2 (2).jpeg",
+      "/assets/img/embarcacoes/sessaf42/2 (3).jpeg",
+      "/assets/img/embarcacoes/sessaf42/2 (4).jpeg",
+      "/assets/img/embarcacoes/sessaf42/2 (5).jpeg",
+      "/assets/img/embarcacoes/sessaf42/2 (6).jpeg",
+      "/assets/img/embarcacoes/sessaf42/2 (7).jpeg",
+      "/assets/img/embarcacoes/sessaf42/2 (8).jpeg"
+    ],
+    "acessorios": [
+      "ar condicionado",
+      "guincho elétrico",
+      "gps",
+      "piso em teca",
+      "microondas",
+      "joystick",
+      "geladeira",
+      "comando eletrônico",
+      "estabilizador",
+      "plataforma submergível"
+    ]
   }
+]
