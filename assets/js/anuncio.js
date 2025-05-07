@@ -88,3 +88,33 @@ function mudarFoto(direcao) {
 
   mostrarFoto(fotoIndex);
 }
+
+
+/* sku url automatico */
+
+// Pegando o SKU da URL
+const urlParams = new URLSearchParams(window.location.search);
+const sku = urlParams.get("sku");
+
+fetch("../data/embarcacoes.json")
+  .then(res => res.json())
+  .then(dados => {
+    const barco = dados.find(b => b.sku === sku);
+    if (!barco) {
+      document.body.innerHTML = "<h1>Barco não encontrado</h1>";
+      return;
+    }
+
+    // Exibe as informações do barco
+    document.getElementById("titulo-barco").innerText = barco.anuncio;
+    document.getElementById("modelo").innerText = barco.modelo;
+    // ... continue com outras infos ...
+
+    // Configura as fotos
+    window.fotos = barco.fotos;
+    window.fotoIndex = 0;
+    mostrarFoto(fotoIndex); // função que você já tem
+  })
+  .catch(err => {
+    console.error("Erro ao carregar JSON:", err);
+  });
