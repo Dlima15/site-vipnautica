@@ -59,16 +59,32 @@ fetch('../../data/embarcacoes.json')
   .catch(err => console.error('Erro ao carregar JSON:', err));
 
 // Função para trocar fotos
+
+
 function mostrarFoto(index) {
   const img = document.getElementById('foto-barco');
   if (fotos.length > 0) {
-    img.src = `../assets/img/${fotos[index]}`;
+    img.classList.remove('visible');
+
+    setTimeout(() => {
+      img.src = fotos[index];
+
+      img.onload = () => {
+        img.classList.add('visible');
+      };
+    }, 200);
   }
 }
 
 function mudarFoto(direcao) {
   fotoIndex += direcao;
-  if (fotoIndex < 0) fotoIndex = fotos.length - 1;
-  if (fotoIndex >= fotos.length) fotoIndex = 0;
+
+  // Corrige ciclo infinito
+  if (fotoIndex < 0) {
+    fotoIndex = fotos.length - 1;
+  } else if (fotoIndex >= fotos.length) {
+    fotoIndex = 0;
+  }
+
   mostrarFoto(fotoIndex);
 }

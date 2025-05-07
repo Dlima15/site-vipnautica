@@ -412,3 +412,13 @@
   .whatsapp-fixo img:hover {
     transform: scale(1.1);
   }
+
+  /* transição fotos dos barcos*/
+
+  #foto-barco {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  #foto-barco.visible {
+    opacity: 1;
+  }
