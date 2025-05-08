@@ -10,7 +10,7 @@
  <body>
      <!-- Header -->
   <header>
-   <a href="./index.html"><img src="/assets/img/LOGOVIP.png" alt="Logo VUIP Náutica" /></a>
+   <a href="../index.html"><img src="/assets/img/LOGOVIP.png" alt="Logo VUIP Náutica" /></a>
 
    <nav class="menu">
      <ul>
@@ -26,6 +26,216 @@
      <a class="bt-hd-2" href="https://wa.link/6tl9hh">Fale conosco!</a>
    </div>
  </header> 
+ <main class="container-filtro">
+   <section class="header-filtro">
+       <h1>Lanchas Seminovas</h1>
+       <p>Encontre sua próxima embarcação com a <span class="highlight-vip">VIP Náutica!</span></p>
+   </section>
+
+   <div class="content-wrapper">
+       <aside class="sidebar-filtros">
+           <div class="oportunidades">
+               <input type="checkbox" id="mostrar-oportunidades">
+               <label for="mostrar-oportunidades">Mostrar oportunidades</label>
+           </div>
+
+           <div class="order-by">
+               <h3>Ordenar por:</h3>
+               <label><input type="radio" name="ordenar" value="fabricante"> Fabricante</label>
+               <label><input type="radio" name="ordenar" value="tamanho"> Tamanho</label>
+               <label><input type="radio" name="ordenar" value="ano"> Ano</label>
+               <label><input type="radio" name="ordenar" value="sku"> Sku</label>
+           </div>
+
+           <div class="filter-group">
+               <h3>Filtro</h3>
+               <label for="fabricante-filter">Fabricante</label>
+               <select id="fabricante-filter">
+                   <option value="todos">Todos</option>
+                   <option value="intermarine">Intermarine</option>
+                   <option value="azimut">Azimut</option>
+                   <option value="sessa">Sessa</option>
+               </select>
+
+               <label for="modelo-filter">Modelo</label>
+               <select id="modelo-filter">
+                   <option value="todos">Todos</option>
+                   <option value="intermarine60">Intermarine 60</option>
+                   <option value="azimut56">Azimut 56</option>
+               </select>
+
+               <label for="tamanho-filter">Tamanho</label>
+               <select id="tamanho-filter">
+                   <option value="todos">Todos</option>
+                   <option value="77">77’</option>
+                   <option value="56">56’</option>
+               </select>
+
+               <label for="ano-filter">Ano</label>
+               <select id="ano-filter">
+                   <option value="todos">Todos</option>
+                   <option value="2021">2021</option>
+                   <option value="2019">2019</option>
+               </select>
+
+               <label for="combustivel-filter">Combustível</label>
+               <select id="combustivel-filter">
+                   <option value="todos">Todos</option>
+                   <option value="diesel">Diesel</option>
+                   <option value="gasolina">Gasolina</option>
+               </select>
+           </div>
+           <button class="btn-limpar-filtros">Limpar filtros</button>
+       </aside>
+
+       <section class="listagem-barcos">
+           <div class="listagem-header">
+               <span class="col-header">Modelo</span>
+               <span class="col-header">Fabricante</span>
+               <span class="col-header">Tamanho</span>
+               <span class="col-header">Ano</span>
+               <span class="col-header">Motor</span>
+               <span class="col-header">Sku</span>
+           </div>
+
+           <a href="anuncio.html?sku=3538" class="barco-item">
+               <div class="barco-img">
+                   <img src="./assets/img/embarcacoes/placeholder.jpeg" alt="Intermarine 60">
+               </div>
+               <span class="barco-info modelo">Intermarine 60</span>
+               <span class="barco-info fabricante">Intermarine</span>
+               <span class="barco-info tamanho">77’</span>
+               <span class="barco-info ano">2021</span>
+               <span class="barco-info motor">2 x Volvo D-6 IPS 600</span>
+               <span class="barco-info sku-btn">3538</span>
+           </a>
+           <a href="anuncio.html?sku=4550" class="barco-item">
+               <div class="barco-img">
+                   <img src="./assets/img/embarcacoes/placeholder2.jpeg" alt="Azimut 56">
+               </div>
+               <span class="barco-info modelo">Azimut 56</span>
+               <span class="barco-info fabricante">Azimut</span>
+               <span class="barco-info tamanho">56’</span>
+               <span class="barco-info ano">2019</span>
+               <span class="barco-info motor">2 x MAN V8 800HP</span>
+               <span class="barco-info sku-btn">4550</span>
+           </a>
+           <a href="anuncio.html?sku=9999" class="barco-item">
+               <div class="barco-img">
+                   <img src="./assets/img/embarcacoes/placeholder.jpeg" alt="Lancha de Teste">
+               </div>
+               <span class="barco-info modelo">Lancha de Teste</span>
+               <span class="barco-info fabricante">Fabricante X</span>
+               <span class="barco-info tamanho">40’</span>
+               <span class="barco-info ano">2022</span>
+               <span class="barco-info motor">Motor Y</span>
+               <span class="barco-info sku-btn">9999</span>
+           </a>
+           <a href="anuncio.html?sku=1111" class="barco-item">
+               <div class="barco-img">
+                   <img src="./assets/img/embarcacoes/placeholder2.jpeg" alt="Barco Demo">
+               </div>
+               <span class="barco-info modelo">Barco Demo</span>
+               <span class="barco-info fabricante">Navios SA</span>
+               <span class="barco-info tamanho">65’</span>
+               <span class="barco-info ano">2020</span>
+               <span class="barco-info motor">Motor Z</span>
+               <span class="barco-info sku-btn">1111</span>
+           </a>
+           <a href="anuncio.html?sku=2222" class="barco-item">
+               <div class="barco-img">
+                   <img src="./assets/img/embarcacoes/placeholder.jpeg" alt="Intermarine 60">
+               </div>
+               <span class="barco-info modelo">Intermarine 60</span>
+               <span class="barco-info fabricante">Intermarine</span>
+               <span class="barco-info tamanho">77’</span>
+               <span class="barco-info ano">2021</span>
+               <span class="barco-info motor">2 x Volvo D-6 IPS 600</span>
+               <span class="barco-info sku-btn">2222</span>
+           </a>
+           <a href="anuncio.html?sku=3333" class="barco-item">
+               <div class="barco-img">
+                   <img src="./assets/img/embarcacoes/placeholder2.jpeg" alt="Azimut 56">
+               </div>
+               <span class="barco-info modelo">Azimut 56</span>
+               <span class="barco-info fabricante">Azimut</span>
+               <span class="barco-info tamanho">56’</span>
+               <span class="barco-info ano">2019</span>
+               <span class="barco-info motor">2 x MAN V8 800HP</span>
+               <span class="barco-info sku-btn">3333</span>
+           </a>
+           <a href="anuncio.html?sku=4444" class="barco-item">
+               <div class="barco-img">
+                   <img src="./assets/img/embarcacoes/placeholder.jpeg" alt="Lancha de Teste">
+               </div>
+               <span class="barco-info modelo">Lancha de Teste</span>
+               <span class="barco-info fabricante">Fabricante X</span>
+               <span class="barco-info tamanho">40’</span>
+               <span class="barco-info ano">2022</span>
+               <span class="barco-info motor">Motor Y</span>
+               <span class="barco-info sku-btn">4444</span>
+           </a>
+           <a href="anuncio.html?sku=5555" class="barco-item">
+               <div class="barco-img">
+                   <img src="./assets/img/embarcacoes/placeholder2.jpeg" alt="Barco Demo">
+               </div>
+               <span class="barco-info modelo">Barco Demo</span>
+               <span class="barco-info fabricante">Navios SA</span>
+               <span class="barco-info tamanho">65’</span>
+               <span class="barco-info ano">2020</span>
+               <span class="barco-info motor">Motor Z</span>
+               <span class="barco-info sku-btn">5555</span>
+           </a>
+       </section>
+   </div>
+</main>
+<a href="https://wa.me/5511950010956" class="whatsapp-fixo" target="_blank">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
+</a>
+<footer id="contato" class="footer">
+   <div class="footer-container">
+     <!-- LOGO -->
+     <div class="footer-logo">
+       <img src="../assets/img/LOGOVIP.png" alt="Logo VIP Náutica" />
+     </div>
+ 
+     <!-- INFOS -->
+     <div class="footer-info">
+       <div class="footer-line">
+         <img src="../assets/img/Shape.png" alt="Ícone Local" class="icon-img" />
+         <p>Av. Vereador José Diniz, 3707 – CJ 82/83</p>
+       </div>
+ 
+       <div class="footer-line">
+         <img src="../assets/img/Rounded_1_.png" alt="Ícone Telefone" class="icon-img" />
+         <p>(11) 95001-0950</p>
+ 
+         <img src="../assets/img/Shape (1).png" alt="Ícone Fax" class="icon-img" style="margin-left: 20px;" />
+         <p>(11) 2737-5050</p>
+       </div>
+ 
+       <div class="footer-social">
+         <p>Social Media</p>
+         <div class="social-icons">
+           <img src="../assets/img/facebook black.1.png" alt="Facebook" />
+           <img src="../assets/img/Twitter.png" alt="Twitter" />
+           <img src="../assets/img/linkedin black.1.png" alt="LinkedIn" />
+           <img src="../assets/img/youtube color.1.png" alt="YouTube" />
+           <img src="../assets/img/instagram black.1.png" alt="Instagram" />
+           <img src="../assets/img/googleplus black.1.png" alt="Google Plus" />
+           <img src="../assets/img/pinterest color.1.png" alt="Pinterest" />
+           <img src="../assets/img/rss black.1.png" alt="RSS" />
+         </div>
+       </div>
+     </div>
+   </div>
+ 
+   <!-- COPYRIGHT -->
+   <div class="footer-copy">
+     <p>Copyright © 2025 • VIP Náutica.</p>
+   </div>
+ </footer>
+
 
 
    <script defer src="./assets/js/filtros.js"></script>

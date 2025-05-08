@@ -88,3 +88,342 @@
     transform: translateY(-2px);
   }
   
+  /* --- Container Principal da Página de Filtro --- */
+.container-filtro {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Header da Seção de Filtro --- */
+.header-filtro {
+    border-bottom: 2px solid #00005f;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.header-filtro h1 {
+    color: #00005f;
+    margin-bottom: 5px;
+    font-size: 2em;
+}
+
+.header-filtro p {
+    color: #555;
+    font-size: 1.1em;
+}
+
+.highlight-vip {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+/* --- Layout Principal: Sidebar de Filtros e Listagem de Barcos --- */
+.content-wrapper {
+    display: flex;
+    gap: 30px; /* Espaçamento entre a sidebar e a listagem */
+}
+
+/* --- Sidebar de Filtros --- */
+.sidebar-filtros {
+    flex: 0 0 250px; /* Largura fixa para a sidebar */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-filtros .oportunidades {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-filtros .oportunidades input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+.sidebar-filtros .oportunidades label {
+    font-weight: bold;
+    color: #00005f;
+}
+
+.sidebar-filtros .order-by,
+.sidebar-filtros .filter-group {
+    margin-bottom: 25px;
+}
+
+.sidebar-filtros h3 {
+    color: #00005f;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.sidebar-filtros .order-by label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.sidebar-filtros .order-by input[type="radio"] {
+    margin-right: 8px;
+}
+
+.sidebar-filtros label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.sidebar-filtros select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 1em;
+}
+
+.btn-limpar-filtros {
+    background-color: #00005f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-limpar-filtros:hover {
+    background-color: #00004a;
+}
+
+/* --- Listagem de Barcos --- */
+.listagem-barcos {
+    flex: 1; /* Ocupa o espaço restante */
+    display: flex;
+    flex-direction: column;
+}
+
+.listagem-header {
+    display: grid;
+    grid-template-columns: 150px repeat(5, 1fr) 80px; /* Ajuste as larguras das colunas conforme necessário */
+    gap: 10px;
+    background-color: #eee;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #00005f;
+    margin-bottom: 15px;
+    text-align: center; /* Centraliza o texto no cabeçalho */
+}
+.listagem-header .col-header:nth-child(1) { text-align: left; padding-left: 10px;} /* Alinha o modelo à esquerda */
+
+
+.barco-item {
+    display: grid;
+    grid-template-columns: 150px repeat(5, 1fr) 80px; /* Deve corresponder ao header */
+    gap: 10px;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: #333;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.barco-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.barco-img {
+    width: 100%;
+    height: 80px; /* Altura fixa para a imagem */
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.barco-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    display: block;
+}
+
+.barco-info {
+    text-align: center;
+    font-size: 0.95em;
+}
+
+.barco-info.modelo {
+    font-weight: bold;
+    text-align: left; /* Alinha o modelo à esquerda */
+}
+
+.barco-info.sku-btn {
+    background-color: #00005f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.barco-info.sku-btn:hover {
+    background-color: #00004a;
+}
+
+/* --- Footer (reaproveitado do seu código existente) --- */
+
+
+  /* footer */
+
+  .footer {
+    background-color: #000c50;
+    color: white;
+    padding: 40px 20px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ffffff30;
+    padding-bottom: 30px;
+  }
+  
+  .footer-logo img {
+    max-width: 500px;
+  }
+  
+  .footer-info {
+    margin-left: 25%;
+    flex: 1;
+    min-width: 260px;
+    margin-top: 20px;
+  }
+  
+  .footer-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .icon-img {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .footer-social {
+    margin-top: 20px;
+  }
+  
+  .footer-social p {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .social-icons img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.2);
+  }
+  
+  .footer-copy {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-line {
+      justify-content: center;
+    }
+  
+    .footer-social {
+      align-items: center;
+    }
+  
+    .footer-logo {
+      margin-bottom: 20px;
+    }
+  }
+  
+
+  /* scrol automatico*/
+
+  section, footer, aside {
+    scroll-margin-top: 100px; /* Ajuste conforme a altura do header */
+  }
+
+  /* zap */
+
+  .whatsapp-fixo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  
+  .whatsapp-fixo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .whatsapp-fixo img:hover {
+    transform: scale(1.1);
+  }
+
+  /* transição fotos dos barcos*/
+
+  #foto-barco {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  #foto-barco.visible {
+    opacity: 1;
+  }
