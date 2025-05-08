@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Header */
+  header {
+    background-color: #010649;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 119px;
+    flex-wrap: wrap;
+  }
+  
+  header img {
+    height: 70px;
+  }
+  
+  .menu ul {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .menu a:hover {
+    color: #eea800;
+  }
+  
+  .menu img {
+    height: 20px;
+  }
+  
+  .buttons-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .buttons-header a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 5px;
+    transition: 0.5s;
+  }
+  
+  .bt-hd-1 {
+    background-color: #eea800;
+  }
+  
+  .bt-hd-2 {
+    background-color: #58b660;
+  }
+  
+  .bt-hd-1:hover {
+    background-color: #ffcc00;
+    transform: translateY(-2px);
+  }
+  
+  .bt-hd-2:hover {
+    background-color: #6cd373;
+    transform: translateY(-2px);
+  }
+  
