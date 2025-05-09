@@ -318,7 +318,88 @@
       "TOMADA DE CAIS",
       "WC ELÉTRICO"
     ]
+  },
+  "2014": {
+    "fabricante": "PHANTOM",
+    "modelo": "PHANTOM 365",
+    "ano": "2014",
+    "tamanho": "36.5",
+    "estilo": "",
+    "combustivel": "Diesel",
+    "motor": "2 X MERCRUISER QSD 320 HP",
+    "horas": "340",
+    "valor": "R$ 970.000",
+    "anuncio": "Phantom 365 / 2014",
+    "fotos": [
+      "/assets/img/embarcacoes/2014/1.jpg",
+      "/assets/img/embarcacoes/2014/1 (1).jpg",
+      "/assets/img/embarcacoes/2014/1 (14).jpg",
+      "/assets/img/embarcacoes/2014/1 (15).jpg",
+      "/assets/img/embarcacoes/2014/1 (16).jpg",
+      "/assets/img/embarcacoes/2014/1 (17).jpg",
+      "/assets/img/embarcacoes/2014/1 (18).jpg",
+      "/assets/img/embarcacoes/2014/1 (19).jpg",
+      "/assets/img/embarcacoes/2014/1 (20).jpg",
+      "/assets/img/embarcacoes/2014/1 (21).jpg",
+      "/assets/img/embarcacoes/2014/1 (22).jpg",
+      "/assets/img/embarcacoes/2014/1 (23).jpg"
+    ],
+    "acessorios": [
+      "Geladeira",
+      "Forno de micro-ondas",
+      "Fogão elétrico",
+      "Carregador de baterias",
+      "Inversor",
+      "Gerador",
+      "Ar condicionado",
+      "Televisão",
+      "Antena de TV",
+      "Boiler",
+      "GPS com carta náutica",
+      "Bússola",
+      "Guincho elétrico",
+      "Rádio VHF",
+      "Flaps hidráulicos",
+      "Direção hidráulica",
+      "Comando eletrônico",
+      "Capota",
+      "Carretilha de madeira",
+      "Espaço gourmet",
+      "Cristaleira",
+      "Vaso sanitário elétrico",
+      "Chuveiro com água quente e fria",
+      "Chuveiro de popa",
+      "Tomadas de cais",
+      "Fechamento de popa"
+    ]
+  },
+   "3079": {
+    "fabricante": "SESSA",
+    "modelo": "SESSA C-36",
+    "ano": "2012",
+    "tamanho": "36",
+    "estilo": "",
+    "combustivel": "Gasolina",
+    "motor": "2 X VOLVO 260 HP",
+    "horas": "",
+    "valor": "R$ 1.050.000",
+    "anuncio": "Sessa C-36 / 2012",
+    "fotos": [
+      "/assets/img/embarcacoes/3079/1 (1).jpeg",
+      "/assets/img/embarcacoes/3079/1 (2).jpeg",
+      "/assets/img/embarcacoes/3079/1 (3).jpeg",
+      "/assets/img/embarcacoes/3079/1 (4).jpeg",
+      "/assets/img/embarcacoes/3079/1 (5).jpeg",
+      "/assets/img/embarcacoes/3079/1 (6).jpeg",
+      "/assets/img/embarcacoes/3079/1 (7).jpeg",
+      "/assets/img/embarcacoes/3079/1 (8).jpeg",
+      "/assets/img/embarcacoes/3079/1 (9).jpeg",
+      "/assets/img/embarcacoes/3079/1 (10).jpeg",
+      "/assets/img/embarcacoes/3079/1 (11).jpeg"
+    ],
+    "acessorios": []
   }
+
 
   
   
