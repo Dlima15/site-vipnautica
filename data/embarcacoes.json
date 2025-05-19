@@ -11,9 +11,43 @@
     "valor": "R$ 1.250.000",
     "anuncio": "INTERMARINE 440 GOLD / 2001",
     "fotos": [
-      "https://vipnautica.com.br/wp-content/uploads/2023/03/WhatsApp-Image-2023-03-20-at-16.38.26-1110x577.jpeg"
+      "../assets/img/embarcacoes/2819/1.jpeg",
+      "../assets/img/embarcacoes/2819/2.jpeg",
+      "../assets/img/embarcacoes/2819/3.jpeg",
+      "../assets/img/embarcacoes/2819/4.jpeg",
+      "../assets/img/embarcacoes/2819/5.jpeg",
+      "../assets/img/embarcacoes/2819/6.jpeg",
+      "../assets/img/embarcacoes/2819/7.jpeg",
+      "../assets/img/embarcacoes/2819/8.jpeg",
+      "../assets/img/embarcacoes/2819/9.jpeg",
+      "../assets/img/embarcacoes/2819/10.jpeg",
+      "../assets/img/embarcacoes/2819/11.jpeg"
     ],
-    "acessorios": []
+    "acessorios": [
+      "HOMOLOGADA 15+1",
+      "Alinhamento do eixo e balanceamento",
+      "Mangueiras do filtro racor e revisão do sistema agos 2021",
+      "Registros de fundo trocados em ago/2021",
+      "Tapecaria completa e fechamento novos ago/2021",
+      "Polimento ago/2021",
+      "Pintura de fundo e propspeed ago/2021",
+      "Barco revisado nov/2021",
+      "Ponte hidráulica",
+      "Microondas",
+      "2 frigo bar",
+      "Rádio am/fm",
+      "2 TV",
+      "Ar condicionado",
+      "Rádio VHF",
+      "Piloto automático",
+      "Radar",
+      "GPS raymarine axion 7 (ano 2018)",
+      "Eletrônicos",
+      "Carregador de baterias",
+      "Inversor/carregador",
+      "Transformador bi volt",
+      "Gerador Kohler de 8kwa"
+    ]
   },
   "2951": {
     "fabricante": "INTERMARINE",
