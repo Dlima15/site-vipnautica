@@ -488,3 +488,11 @@
     .whatsapp-fixo img:hover {
       transform: scale(1.1);
     }
+
+    .line{
+      width: 70%;
+      height: 1px;
+      background-color: #010649;
+      margin: 0 auto 30px auto;
+      border-radius: 5px;
+    }
