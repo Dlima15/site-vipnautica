@@ -31,7 +31,7 @@ A empresa **adorou a proposta** e encaminhou o projeto para o **Head de TI**, qu
 
 ---
 
-## 💬 Feedback do Head de TI (simulado)
+## 💬 Feedback do Head de TI
 
 > _“Ficamos impressionados com a proatividade e a qualidade do trabalho entregue. O novo site elevou significativamente a imagem da VIP Náutica. É nítido o cuidado em cada detalhe, desde o design até a estrutura do código. É o tipo de profissionalismo que queremos ao nosso lado.”_
 
