@@ -1323,33 +1323,6 @@
       "CAIXA DE SOM NA PROA"
     ]
   },
-  "3500": {
-    "fabricante": "FIBRAFORT",
-    "modelo": "FOCKER 255",
-    "ano": "2022",
-    "tamanho": "255",
-    "estilo": "",
-    "combustivel": "DIESEL",
-    "motor": "2 X MERCRUISER",
-    "horas": "72",
-    "valor": "R$ 374.900,00",
-    "anuncio": "FOCKER 255 / 2022",
-    "fotos": [
-      "https://vipnautica.com.br/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-25-at-13.13.25-1-1110x577.jpeg"
-    ],
-    "acessorios": [
-      "VASO ELÉTRICO",
-      "BOIA CIRCULAR CLASSE III",
-      "SONAR / GPS GARMIN",
-      "PISO NÁUTICO EM E.V.A OCRE",
-      "2 PARES DE ALTO FALANTE MARINIZADO",
-      "TOLDO",
-      "CONJUNTO SALVATAGEM",
-      "CONJUNTO RÁDIO VHF",
-      "ÂNCORA",
-      "GUINCHO ELÉTRICO"
-    ]
-  },
   "3510": {
     "fabricante": "INTERMARINE",
     "modelo": "CIGARRETTE",
@@ -1615,7 +1588,15 @@
     "valor": "R$ 570.000,00",
     "anuncio": "PHANTOM 360 / 2009",
     "fotos": [
-      "https://vipnautica.com.br/wp-content/uploads/2025/04/WhatsApp-Image-2025-04-07-at-10.59.25-1110x577.jpeg"
+      "../assets/img/embarcacoes/3506/1.jpeg",
+      "../assets/img/embarcacoes/3506/1 (1).jpeg",
+      "../assets/img/embarcacoes/3506/1 (2).jpeg",
+      "../assets/img/embarcacoes/3506/1 (3).jpeg",
+      "../assets/img/embarcacoes/3506/1 (4).jpeg",
+      "../assets/img/embarcacoes/3506/1 (6).jpeg",
+      "../assets/img/embarcacoes/3506/1 (7).jpeg",
+      "../assets/img/embarcacoes/3506/1 (8).jpeg",
+      "../assets/img/embarcacoes/3506/1 (9).jpeg"
     ],
     "acessorios": [
       "Cabo de energia para tomada de cais",
