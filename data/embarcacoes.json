@@ -1960,29 +1960,6 @@
       "Salvatagem completa"
     ]
   },
-  "3532": {
-    "fabricante": "FERRETTI",
-    "modelo": "FERRETTI 53",
-    "ano": "2011",
-    "tamanho": "53",
-    "estilo": "",
-    "combustivel": "DIESEL",
-    "motor": "2 X MAN 800 HP",
-    "horas": "680",
-    "valor": "R$ 5.200.000,00",
-    "anuncio": "FERRETTI 53 / 2011",
-    "fotos": [
-      "https://vipnautica.com.br/wp-content/uploads/2025/04/1-2-1110x577.jpeg"
-    ],
-    "acessorios": [
-      "Antena Sky",
-      "Pintura de fundo sendo refeita",
-      "2 gps modernos",
-      "Geladeira e tvs novas",
-      "Carreta de encalhe",
-      "Marcenaria impecável"
-    ]
-  },
   "3534": {
     "fabricante": "INTERMARINE",
     "modelo": "INTERMARINE 42",
@@ -1995,7 +1972,12 @@
     "valor": "R$ 3.300.000,00",
     "anuncio": "INTERMARINE 42 / 2015",
     "fotos": [
-      "https://vipnautica.com.br/wp-content/uploads/2025/04/WhatsApp-Image-2025-04-24-at-10.46.38-1078x577.jpeg"
+      "../assets/img/embarcacoes/3534/1.jpeg",
+      "../assets/img/embarcacoes/3534/1 (2).jpeg",
+      "../assets/img/embarcacoes/3534/1 (3).jpeg",
+      "../assets/img/embarcacoes/3534/1 (4).jpeg",
+      "../assets/img/embarcacoes/3534/1 (6).jpeg",
+      "../assets/img/embarcacoes/3534/1 (7).jpeg"
     ],
     "acessorios": [
       "Sistema de navegação completo",
