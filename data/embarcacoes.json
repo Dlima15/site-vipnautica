@@ -347,7 +347,15 @@
     "valor": "R$ 296.989",
     "anuncio": "FOCKER 212 FX / 2024",
     "fotos": [
-      "https://www.fibrafort.com.br/uploads/produtos/banner/pt/29/thumbs/1920x550-212-banner-site-desktop.webp"
+      "../assets/img/embarcacoes/oe003/1.webp",
+      "../assets/img/embarcacoes/oe003/1 (1).jpg",
+      "../assets/img/embarcacoes/oe003/1 (1).webp",
+      "../assets/img/embarcacoes/oe003/1 (2).jpg",
+      "../assets/img/embarcacoes/oe003/1 (3).jpg",
+      "../assets/img/embarcacoes/oe003/1 (4).jpg",
+      "../assets/img/embarcacoes/oe003/1 (5).jpg",
+      "../assets/img/embarcacoes/oe003/1 (6).jpg",
+      "../assets/img/embarcacoes/oe003/1 (7).jpg"
     ],
     "acessorios": []
   },
@@ -363,7 +371,13 @@
     "valor": "R$ 461.899",
     "anuncio": "FOCKER 242 GTC / 2024",
     "fotos": [
-      "https://www.fibrafort.com.br/uploads/produtos/banner/pt/22/thumbs/1920x550-242GTC-banner-site-desktop.webp"
+      "../assets/img/embarcacoes/oe001/1.jpg",
+      "../assets/img/embarcacoes/oe001/1 (1).jpg",
+      "../assets/img/embarcacoes/oe001/1 (2).jpg",
+      "../assets/img/embarcacoes/oe001/1 (3).jpg",
+      "../assets/img/embarcacoes/oe001/1 (4).jpg",
+      "../assets/img/embarcacoes/oe001/1 (5).jpg",
+      "../assets/img/embarcacoes/oe001/1 (6).jpg"
     ],
     "acessorios": []
   },
