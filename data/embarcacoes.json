@@ -116,7 +116,7 @@
     "acessorios": []
   },
   "2012": {
-    "fabricante": "FOCKER",
+    "fabricante": "FIBRAFORT",
     "modelo": "FOCKER 212",
     "ano": "2024",
     "tamanho": "212",
@@ -147,7 +147,7 @@
     "acessorios": []
   },
   "2014": {
-    "fabricante": "PHANTOM",
+    "fabricante": "SCHAEFER",
     "modelo": "PHANTOM 365",
     "ano": "2014",
     "tamanho": "365",
@@ -263,7 +263,7 @@
     ]
   },
   "3124": {
-    "fabricante": "PHANTOM",
+    "fabricante": "SCHAEFER",
     "modelo": "PHANTOM 365",
     "ano": "2014",
     "tamanho": "365",
@@ -542,7 +542,7 @@
     ]
   },
  "OE026": {
-    "fabricante": "FOCKER",
+    "fabricante": "FIBRAFORT",
     "modelo": "FOCKER 388",
     "ano": "ZERO ",
     "tamanho": "388",
