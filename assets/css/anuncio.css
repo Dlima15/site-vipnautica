@@ -207,7 +207,7 @@
   
   .preco {
     font-weight: bold;
-    background-color: #EEA800;
+    background-color: #00cccc;
     color: #000;
   }
   
@@ -553,11 +553,14 @@
     }
 
     .preco {
-        background-color: transparent;
+        
+     background-color: #00cccc;
         color: #000;
-        padding: 5px; /* Adiciona um padding ao preço para destacá-lo */
-        display: inline-block; /* Faz com que o span do preço se ajuste ao conteúdo */
-        border-radius: 4px; /* Opcional: borda arredondada para o preço */
+        padding: 5px 8px; 
+        display: inline-block; 
+        width: auto; 
+        max-width: 100%; 
+        border-radius: 4px;
     }
 
     /* ... (código existente da seção empresa, footer, etc.) ... */
