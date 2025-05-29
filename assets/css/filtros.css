@@ -502,3 +502,164 @@
   #foto-barco.visible {
     opacity: 1;
   }
+
+
+
+  /* xxxxxxxxxxxxxxxxxxxx responsivo */
+
+  @media (max-width: 768px) {
+  /* Header */
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 15px 20px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
+
+  .buttons-header {
+    align-items: center;
+    width: 100%;
+  }
+
+  .buttons-header a {
+    width: 100%;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  /* Container de Filtro */
+  .container-filtro {
+    padding: 15px;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sidebar-filtros {
+    width: 100%;
+    flex: 1;
+    padding: 15px;
+  }
+
+  .listagem-barcos {
+    width: 100%;
+  }
+
+  /* Listagem de Barcos (Grid -> Colunas em Coluna) */
+  .listagem-header {
+    display: none; /* Oculta o cabeçalho no mobile */
+  }
+
+  .barco-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .barco-img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .barco-info {
+    text-align: left;
+    font-size: 0.9em;
+  }
+
+  .barco-info.modelo {
+    font-weight: bold;
+    font-size: 1em;
+  }
+
+  .barco-info.sku-btn {
+    font-size: 0.9em;
+    text-align: center;
+    padding: 8px 12px;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  /* Empresa */
+  .empresa-topo {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .empresa-logo img {
+    max-width: 200px;
+  }
+
+  .empresa-texto {
+    font-size: 14px;
+  }
+
+  .card-local {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .card-local h3 {
+    font-size: 20px;
+  }
+
+  .card-local p {
+    font-size: 1em;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    max-width: 250px;
+  }
+
+  .footer-info {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .footer-line {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .whatsapp-fixo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Botões, Cards e Textos menores */
+  .btn-limpar-filtros {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+
+  .sidebar-filtros select {
+    font-size: 0.9em;
+    padding: 6px;
+  }
+
+  .sidebar-filtros label {
+    font-size: 0.9em;
+  }
+}

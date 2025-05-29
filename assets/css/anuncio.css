@@ -455,3 +455,223 @@
   #foto-barco.visible {
     opacity: 1;
   }
+
+
+  /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx responsivo */ 
+
+
+  /* Responsivo - Mobile */
+@media (max-width: 768px) {
+
+
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .buttons-header {
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .buttons-header a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu a {
+    font-size: 16px;
+  }
+
+  /* Ajuste dos cards do carrossel */
+  .card-barco {
+    min-width: 250px;
+    max-width: 300px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    flex-shrink: 0;
+    margin: 0 auto;
+  }
+
+  .card-barco img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    /* ... (código existente do header, anúncio, etc.) ... */
+
+    /* Parte do anúncio da embarcação */
+    /* ... (código existente da parte de anúncio) ... */
+
+    .info-barco {
+        display: block; /* A tabela se comporta como um bloco */
+        width: 100%;
+        margin-top: 0.8rem;
+        margin-bottom: 1.5rem;
+        font-size: 0.9em;
+    }
+
+    .info-barco thead,
+    .info-barco tbody,
+    .info-barco th,
+    .info-barco td,
+    .info-barco tr {
+        display: block; /* Todos os elementos da tabela se comportam como blocos */
+        width: 100%; /* Ocupam a largura total disponível */
+    }
+
+    .info-barco tr {
+        margin-bottom: 10px; /* Adiciona um espaço entre cada "linha" lógica (par de th/td) */
+        border-bottom: 1px solid #ddd; /* Opcional: Adicionar uma borda para separar as linhas */
+        padding-bottom: 5px;
+    }
+
+    .info-barco th {
+        text-align: left;
+        font-weight: bold;
+        padding: 0.4rem 0; /* Ajusta o padding para que o texto comece na esquerda e não tenha padding à direita */
+        color: #1f1f5c;
+    }
+
+    .info-barco td {
+        padding: 0.2rem 0; /* Ajusta o padding para o valor */
+        text-align: left; /* Garante que o valor também esteja alinhado à esquerda */
+    }
+
+    .preco {
+        background-color: transparent;
+        color: #000;
+        padding: 5px; /* Adiciona um padding ao preço para destacá-lo */
+        display: inline-block; /* Faz com que o span do preço se ajuste ao conteúdo */
+        border-radius: 4px; /* Opcional: borda arredondada para o preço */
+    }
+
+    /* ... (código existente da seção empresa, footer, etc.) ... */
+}
+
+  .info {
+    padding: 10px;
+    text-align: left;
+  }
+
+  .sku {
+    color: #888;
+    font-size: 0.85em;
+    margin-bottom: 5px;
+  }
+
+  .motor, .preco, .fabricante, .modelo {
+    font-size: 0.85em;
+    margin-bottom: 4px;
+  }
+
+  .detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.8em;
+  }
+
+  .detalhes span {
+    width: 100%;
+  }
+
+  .btn-nav {
+    font-size: 1.5rem;
+    padding: 6px;
+  }
+
+  /* Botão "ver mais" menor */
+  .button-ft-sm a, .button-ft-nv a {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  /* Ajuste nos espaçamentos */
+  .carrosel-barcos {
+    margin-top: 10px;
+  }
+
+  .carrosel-barcos h2 {
+    font-size: 1.2em;
+  }
+
+  .carrossel {
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .empresa-topo {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .empresa-logo img {
+    max-width: 200px;
+  }
+
+  .empresa-texto {
+    font-size: 14px;
+  }
+
+  .card-local {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .card-local h3 {
+    font-size: 20px;
+  }
+
+  .card-local p {
+    font-size: 1em;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    max-width: 300px;
+  }
+
+  .footer-info {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .footer-line {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .whatsapp-fixo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Ajustes para a frase animada */
+  .frase-animada {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+}
