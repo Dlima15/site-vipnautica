@@ -301,22 +301,25 @@
   }
 
   
+ 
   .card-local p {
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-  
-  .card-local span {
-    font-size: 25px;
-    margin-right: 5px;
-  }
-  
-  .card-local img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-  }
-  
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    
+    .img-local-lugar {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+    
+    .icon-local {
+     width: 6%;
+     height: auto;
+     margin-right: 6px;
+     vertical-align: middle;
+}
 
   /* footer */
 

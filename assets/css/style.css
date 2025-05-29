@@ -89,6 +89,37 @@
     transform: translateY(-2px);
   }
   
+
+/* carrossel frase */
+
+.frase-animada {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: auto;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+  background-color:transparent;
+  padding: 8px 16px;
+  border-radius: 8px;
+  z-index: 9999;
+  animation: moverFrase 15s linear infinite;
+  font-weight: 100;
+}
+
+@keyframes moverFrase {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
+
+
   /* Capa - Carousel */
   .capa {
     margin-top: 5px;
@@ -348,20 +379,24 @@
     
     .card-local p {
       margin-bottom: 10px;
-      font-size: 14px;
+      font-size: 1.2em;
     }
+
     
-    .card-local span {
-      font-size: 25px;
-      margin-right: 5px;
-    }
-    
-    .card-local img {
+    .img-local-lugar {
       width: 100%;
       height: auto;
       border-radius: 6px;
     }
     
+    .icon-local {
+     width: 6%;
+     height: auto;
+     margin-right: 6px;
+     vertical-align: middle;
+}
+
+
 
     /* footer */
 
