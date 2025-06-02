@@ -340,7 +340,7 @@
     content: '';
     position: absolute;
     top: -2px; 
-    left: -2px; /
+    left: -2px; 
     right: -2px;
     bottom: -2px; 
     border-radius: 10px; 
@@ -355,7 +355,7 @@
 
   .button-ft-nv{
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
+    justify-content: center; 
   }
   
     .button-ft-nv a{
