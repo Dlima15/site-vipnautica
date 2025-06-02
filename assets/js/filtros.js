@@ -18,12 +18,11 @@ const ordenarRadios = document.querySelectorAll('input[name="ordenar"]');
 // --- Funcionalidade de Scroll Suave para Links Internos ---
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
-        e.preventDefault(); // Impede o comportamento padrão do link
-
-        const target = document.querySelector(this.getAttribute("href")); // Seleciona o elemento alvo
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
         if (target) {
             window.scrollTo({
-                top: target.offsetTop - 80, // Ajusta para header fixo
+                top: target.offsetTop - 80,
                 behavior: "smooth"
             });
         }
@@ -42,12 +41,11 @@ function renderizarCabecalhoListagem() {
             <span class="col-header">Sku</span>
         </div>
     `;
-    barcosContainer.insertAdjacentHTML('afterbegin', headerHtml); // Insere o cabeçalho antes dos barcos
+    barcosContainer.insertAdjacentHTML('afterbegin', headerHtml);
 }
 
 // --- Função para Preencher os Selects de Filtro com Opções Dinâmicas ---
 function preencherOpcoesFiltro() {
-    // Cria um Set para armazenar valores únicos
     const fabricantes = new Set();
     const modelos = new Set();
     const tamanhos = new Set();
@@ -57,14 +55,13 @@ function preencherOpcoesFiltro() {
     todasEmbarcacoes.forEach(barco => {
         fabricantes.add(barco.fabricante);
         modelos.add(barco.modelo);
-        tamanhos.add(barco.tamanho); // Pode ser necessário converter para string se o JSON tiver números e strings misturados
+        tamanhos.add(barco.tamanho);
         anos.add(barco.ano);
         combustiveis.add(barco.combustivel);
     });
 
-    // Converte Sets para Arrays, ordena e preenche os selects
     const addOptions = (selectElement, optionsSet) => {
-        selectElement.innerHTML = '<option value="todos">Todos</option>'; // Opção padrão
+        selectElement.innerHTML = '<option value="todos">Todos</option>';
         Array.from(optionsSet).sort().forEach(option => {
             const opt = document.createElement('option');
             opt.value = option;
@@ -82,9 +79,8 @@ function preencherOpcoesFiltro() {
 
 // --- Função para Renderizar os Barcos na Tela ---
 function renderizarBarcos(barcosParaRenderizar) {
-    // Limpa o conteúdo atual do container (exceto o cabeçalho, se já foi inserido)
     barcosContainer.innerHTML = '';
-    renderizarCabecalhoListagem(); // Re-insere o cabeçalho
+    renderizarCabecalhoListagem();
 
     if (barcosParaRenderizar.length === 0) {
         barcosContainer.innerHTML += '<p class="no-results">Nenhuma embarcação encontrada com os filtros aplicados.</p>';
@@ -93,10 +89,9 @@ function renderizarBarcos(barcosParaRenderizar) {
 
     barcosParaRenderizar.forEach(barco => {
         const barcoItem = document.createElement('a');
-        barcoItem.href = `anuncio.html?sku=${barco.sku}`; // Link para a página de anúncio
+        barcoItem.href = `anuncio.html?sku=${barco.sku}`;
         barcoItem.classList.add('barco-item');
 
-        // Usa a primeira foto como imagem de preview
         const fotoSrc = barco.fotos && barco.fotos.length > 0 ? barco.fotos[0] : './assets/img/embarcacoes/placeholder.jpeg';
 
         barcoItem.innerHTML = `
@@ -116,9 +111,8 @@ function renderizarBarcos(barcosParaRenderizar) {
 
 // --- Função para Aplicar Filtros e Ordenação ---
 function aplicarFiltrosEOrdenar() {
-    embarcacoesFiltradas = [...todasEmbarcacoes]; // Começa com todas as embarcações
+    embarcacoesFiltradas = [...todasEmbarcacoes];
 
-    // --- Aplicar Filtros ---
     const filtroFabricante = fabricanteFilter.value;
     const filtroModelo = modeloFilter.value;
     const filtroTamanho = tamanhoFilter.value;
@@ -132,7 +126,6 @@ function aplicarFiltrosEOrdenar() {
         embarcacoesFiltradas = embarcacoesFiltradas.filter(barco => barco.modelo === filtroModelo);
     }
     if (filtroTamanho !== 'todos') {
-        // Ajusta para lidar com tamanhos como strings ou números, removendo o '’'
         embarcacoesFiltradas = embarcacoesFiltradas.filter(barco =>
             String(barco.tamanho).replace('’', '') === String(filtroTamanho).replace('’', '')
         );
@@ -144,7 +137,6 @@ function aplicarFiltrosEOrdenar() {
         embarcacoesFiltradas = embarcacoesFiltradas.filter(barco => barco.combustivel === filtroCombustivel);
     }
 
-    // --- Aplicar Ordenação ---
     const ordenarPor = document.querySelector('input[name="ordenar"]:checked').value;
 
     embarcacoesFiltradas.sort((a, b) => {
@@ -156,7 +148,6 @@ function aplicarFiltrosEOrdenar() {
                 valB = b.fabricante.toLowerCase();
                 break;
             case 'tamanho':
-                // Converte o tamanho para número para ordenação correta (ex: "77’" para 77)
                 valA = parseFloat(String(a.tamanho).replace('’', ''));
                 valB = parseFloat(String(b.tamanho).replace('’', ''));
                 break;
@@ -168,7 +159,7 @@ function aplicarFiltrosEOrdenar() {
                 valA = parseInt(a.sku);
                 valB = parseInt(b.sku);
                 break;
-            default: // Por padrão, pode ser por fabricante
+            default:
                 valA = a.fabricante.toLowerCase();
                 valB = b.fabricante.toLowerCase();
                 break;
@@ -180,6 +171,7 @@ function aplicarFiltrosEOrdenar() {
     });
 
     renderizarBarcos(embarcacoesFiltradas);
+    mostrarToast(); // <-- Mostra o toast após renderizar
 }
 
 // --- Event Listeners para os Filtros e Ordenação ---
@@ -200,24 +192,34 @@ limparFiltrosBtn.addEventListener('click', () => {
     tamanhoFilter.value = 'todos';
     anoFilter.value = 'todos';
     combustivelFilter.value = 'todos';
-    document.querySelector('input[name="ordenar"][value="fabricante"]').checked = true; // Volta para ordenação por fabricante
-    aplicarFiltrosEOrdenar(); // Reaplica os filtros (agora zerados)
+    document.querySelector('input[name="ordenar"][value="fabricante"]').checked = true;
+    aplicarFiltrosEOrdenar();
+    mostrarToast(); // <-- Também mostra o toast ao limpar
 });
 
 // --- Inicialização: Busca os Dados do JSON ao Carregar a Página ---
 fetch("../data/embarcacoes.json")
     .then(res => res.json())
     .then(dados => {
-        // Percorre o objeto 'dados' e cria um novo array de objetos,
-        // onde cada objeto agora TEM a propriedade 'sku' baseada na chave.
         todasEmbarcacoes = Object.keys(dados).map(skuKey => {
             return {
-                sku: skuKey, // Adiciona a propriedade SKU a cada objeto de barco
-                ...dados[skuKey] // Copia todas as outras propriedades do objeto original
+                sku: skuKey,
+                ...dados[skuKey]
             };
         });
 
-        preencherOpcoesFiltro(); // Preenche os selects de filtro com as opções do JSON
-        aplicarFiltrosEOrdenar(); // Aplica os filtros e ordena (inicialmente sem filtros, só ordenação padrão)
+        preencherOpcoesFiltro();
+        aplicarFiltrosEOrdenar();
     })
     .catch(err => console.error("Erro ao carregar JSON:", err));
+
+// --- Função para mostrar o toast ---
+function mostrarToast() {
+    const toast = document.getElementById("filtro-toast");
+    if (!toast) return;
+
+    toast.classList.add("visivel");
+    setTimeout(() => {
+        toast.classList.remove("visivel");
+    }, 3000);
+}

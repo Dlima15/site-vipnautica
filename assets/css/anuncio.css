@@ -7,6 +7,74 @@
     box-sizing: border-box;
   }
   
+
+/* xxxxxxxxxxxxx carregamento loading */
+
+/* Estilos para o Overlay de Carregamento */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Garante que fique acima de tudo */
+    transition: opacity 0.3s ease-out; /* Transição para esconder/mostrar */
+    opacity: 0; /* Inicia invisível */
+    pointer-events: none; /* Permite clicar através quando invisível */
+}
+
+#loading-overlay.show {
+    opacity: 1;
+    pointer-events: auto; /* Bloqueia cliques quando visível */
+}
+
+.spinner {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #010649; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite; /* Animação de rotação */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Estilos para a Mensagem de Aviso (Toast) */
+#toast-message {
+    position: fixed;
+    bottom: 20px; /* Ajuste a posição conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #010649; /* Cor de fundo azul escuro */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    z-index: 9998; /* Abaixo do loading, mas acima do conteúdo */
+    opacity: 0; /* Inicia invisível */
+    visibility: hidden; /* Oculta totalmente quando não está visível */
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out, visibility 0s linear 0.4s; /* Transição para fade-in/out */
+    min-width: 250px; /* Largura mínima */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+#toast-message.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-10px); /* Leve movimento para cima */
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out; /* Sem delay no visibility */
+}
+
+/* fim loading */
+
   body {
     margin: 0;
     background-color: #ffffff;
