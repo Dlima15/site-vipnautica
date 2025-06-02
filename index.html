@@ -56,17 +56,30 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
 
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="./assets/img/capa/capa1.png" alt="Primeiro Slide" />
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="./assets/img/capa/capa2.png" alt="Segundo Slide" />
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="./assets/img/capa/capa3.png" alt="Terceiro Slide" />
-        </div>
-      </div>
+    <div class="carousel-inner">
+  <div class="carousel-item active">
+    <picture>
+      <!-- Mobile -->
+      <source srcset="./assets/img/capa/capamobile1.png" media="(max-width: 768px)">
+      <!-- Desktop -->
+      <img class="d-block w-100" src="./assets/img/capa/capa1.png" alt="Primeiro Slide">
+    </picture>
+  </div>
+  
+  <div class="carousel-item">
+    <picture>
+      <source srcset="./assets/img/capa/capamobile2.png" media="(max-width: 768px)">
+      <img class="d-block w-100" src="./assets/img/capa/capa2.png" alt="Segundo Slide">
+    </picture>
+  </div>
+  
+  <div class="carousel-item">
+    <picture>
+      <source srcset="./assets/img/capa/capamobile3.png" media="(max-width: 768px)">
+      <img class="d-block w-100" src="./assets/img/capa/capa3.png" alt="Terceiro Slide">
+    </picture>
+  </div>
+</div>
 
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
