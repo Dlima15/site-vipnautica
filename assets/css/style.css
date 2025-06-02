@@ -20,7 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 10%;
     height: 119px;
     flex-wrap: wrap;
   }
@@ -62,6 +62,8 @@
   }
   
   .buttons-header a {
+    text-align: center;
+    width: 100%;
     display: block;
     text-decoration: none;
     color: white;
