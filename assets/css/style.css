@@ -287,12 +287,12 @@
     right: 10px;
   }
   
-.button-ft-sm{
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
+.button-ft-sm {
+    display: flex;
+    justify-content: center; 
 }
 
-  .button-ft-sm a{
+.button-ft-sm a {
     background-color: #010649;
     color: #fff;
     padding: 12px 24px;
@@ -300,17 +300,58 @@
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 12px rgba(1, 6, 73, 0.2);
-  }
-  
-  .button-seminovos:hover {
-    background-color: #0a1172;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(1, 6, 73, 0.4);
-    text-decoration: none;
-    color: #ffcc00;
-  }
+    
+    position: relative;
+    overflow: hidden; 
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); 
+    box-shadow: 0 4px 12px rgba(1, 6, 73, 0.2); 
+    z-index: 1; 
+}
+
+
+.button-ft-sm a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%; 
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); 
+    transform: skewX(-30deg); 
+    transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: -1; 
+}
+
+.button-ft-sm a:hover { 
+    background-color: #0a1172; 
+    transform: translateY(-5px) scale(1.05); 
+    box-shadow: 0 10px 25px rgba(1, 6, 73, 0.6); 
+    color: #ffcc00; 
+    text-decoration: none; 
+}
+
+/* Efeito de brilho ao passar o mouse */
+.button-ft-sm a:hover::before {
+    left: 125%; 
+    background: rgba(255, 255, 255, 0.3); 
+}
+
+.button-ft-sm a::after {
+    content: '';
+    position: absolute;
+    top: -2px; 
+    left: -2px; /
+    right: -2px;
+    bottom: -2px; 
+    border-radius: 10px; 
+    border: 2px solid transparent; 
+    transition: border-color 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 0; 
+}
+
+.button-ft-sm a:hover::after {
+    border-color: #ffcc00;
+}
 
   .button-ft-nv{
     display: flex;
