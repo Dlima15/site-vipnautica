@@ -46,6 +46,12 @@
     gap: 5px;
     transition: color 0.3s ease;
   }
+
+  .marca-sub {
+    display: block; 
+    font-size: 0.8em; 
+
+}
   
   .menu a:hover {
     color: #eea800;
@@ -182,17 +188,21 @@
     margin-top: 15px;
   }
   
-  .carrosel-barcos h2{
-      text-align: center;
-      font-weight: bold;
-      color: #010649;
-  }
+.carrosel-barcos h2 {
+    text-align: center;
+    font-weight: bold; 
+    color: #010649;
+}
+
+.carrosel-barcos h2 .marca-fina {
+    font-weight: 50; 
+}
   
   .carrosel-barcos .line {
     width: 70%;
     height: 1px;
     background-color: #010649;
-    margin: 0 auto 30px auto;
+    margin: 30px auto 30px auto;
     border-radius: 5px;
   }
 
@@ -318,14 +328,7 @@
       transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 12px rgba(1, 6, 73, 0.2);
     }
-    
-    .button-seminovos:hover {
-      background-color: #0a1172;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(1, 6, 73, 0.4);
-      text-decoration: none;
-      color: #ffcc00;
-    }
+
 
     /* Aside seção */
 

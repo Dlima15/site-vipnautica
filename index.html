@@ -35,8 +35,8 @@
 
     <nav class="menu">
       <ul>
-        <li><a href="#novos"><img src="./assets/img/icon header.svg" alt=""> Barcos Novos |</a></li>
-        <li><a href="#seminovos"><img src="./assets/img/icon header.svg" alt=""> Barcos Seminovos |</a></li>
+        <li><a href="#novos"><img src="./assets/img/icon header.svg" alt=""> Barcos Novos  <span class="marca-sub">Focker</span> | </a></li>
+        <li><a href="#seminovos"><img src="./assets/img/icon header.svg" alt=""> Barcos Seminovos <span class="marca-sub">Multimarcas</span> |</a></li>
         <li><a href="#contato"><img src="./assets/img/email contato.svg" alt=""> Contato |</a></li>
         <li><a href="#sobre-nos">Sobre nós</a></li>
       </ul>
@@ -47,9 +47,6 @@
       <a class="bt-hd-2" href="https://wa.link/6tl9hh">Fale conosco!</a>
     </div>
   </header>
-
-  <!--<div class="frase-animada">VIP Náutica há 25 anos com você</div> -->
-
   <!-- Capa com Carrossel -->
   <section class="capa">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -82,7 +79,10 @@
     </div>
   </section>
   <section id="seminovos" class="carrosel-barcos">
-    <h2>Seminovos</h2>
+     <h2>Seminovos | <span class="marca-fina">Multimarcas</span></h2>
+     <div class="button-ft-sm">
+      <a class="button-seminovos" href="./pages/filtros.html">clique para Ver todas embarcações</a>
+    </div>  
     <div class="line"></div>
     <div class="carrossel-container">
       <button class="btn-nav left" onclick="scrollCarousel('carrossel-seminovos', -1)">&#10094;</button>
@@ -195,13 +195,10 @@
   
       <button class="btn-nav right" onclick="scrollCarousel('carrossel-seminovos', 1)">&#10095;</button>
     </div>
-    <div class="button-ft-sm">
-      <a class="button-seminovos" href="./pages/filtros.html">Ver todas embarcações Seminovas</a>
-    </div>  
   </section>
   <section id="novos" class="carrosel-barcos">
     <div class="line"></div>
-    <h2>Novos</h2>
+    <h2>Novos | <span class="marca-fina">Focker</span></h2>
     <div class="carrossel-container">
       <button class="btn-nav left" onclick="scrollCarousel('carrossel-novos', -1)">&#10094;</button>
       
@@ -313,9 +310,6 @@
         </div>
   
       <button class="btn-nav right" onclick="scrollCarousel('carrossel-novos', 1)">&#10095;</button>
-    </div>
-    <div class="button-ft-nv">
-      <a class="button-seminovos" href="./pages/filtros.html">Ver todas embarcações Novas</a>
     </div>  
   </section>
   <div class="line"></div>
@@ -334,7 +328,7 @@
       <div class="empresa-locais">
 
          <div class="card-local">
-          <h3>VIP Náutica – São Paulo – SP (sede)</h3>
+          <h3>VIP Náutica – São Paulo – SP (Escritório)</h3>
           <p>
             <img src="./assets/img/local (1).png" alt="Localização" class="icon-local" />
                Av. Vereador José Diniz,<br />

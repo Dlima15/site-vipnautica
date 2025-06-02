@@ -19,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 30%;
     height: 119px;
     flex-wrap: wrap;
   }
@@ -233,9 +233,9 @@
     margin-top: 2rem;
   }
   
-  .btn-consultar {
+.btn-consultar {
     display: inline-block;
-    background-color: #25d366;
+    background-color: #046929;
     color: white;
     font-size: 1rem;
     padding: 0.8rem 2rem;
@@ -244,7 +244,36 @@
     border-radius: 25px;
     font-weight: bold;
     margin-top: 2rem;
-  }
+
+    position: relative; 
+    overflow: hidden; 
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.btn-consultar:hover {
+    background-color: #058c35; 
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35); 
+    cursor: pointer; 
+}
+
+
+.btn-consultar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); 
+    transform: skewX(-30deg);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-consultar:hover::before {
+    left: 100%; 
+}
 
 
   /*x fim */
