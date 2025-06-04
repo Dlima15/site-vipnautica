@@ -10,9 +10,9 @@ Percebendo essa necessidade, tomei a iniciativa de **desenvolver uma nova propos
 
 O projeto completo foi realizado **integralmente por mim**, passando por todas as fases:
 
-- ✅ **Planejamento e levantamento de requisitos** com base nas dores do site atual;  
+- ✅ **Planejamento e levantamento de requisitos** com base nas dores do site antigo;  
 - ✅ **Documentação funcional e técnica** do sistema;  
-- ✅ **Prototipação no Figma**, com foco em experiência de navegação moderna, fluida e responsiva;  
+- ✅ **Prototipação no Figma**, com foco em uma experiência de navegação moderna, fluida e responsiva;  
 - ✅ **Desenvolvimento completo**, com código limpo, organizado e otimizado;  
 - ✅ **Apresentação à empresa**, com detalhamento técnico e navegação funcional do protótipo.
 
@@ -27,7 +27,10 @@ A nova versão do site trouxe um **grande salto de qualidade visual e funcional*
 - 🧩 Estrutura organizada e escalável;  
 - ⚡ Experiência de navegação mais fluida e profissional.
 
-A empresa **adorou a proposta** e encaminhou o projeto para o **Head de TI**, que elogiou a qualidade do trabalho, a arquitetura e a estrutura do código.
+A proposta foi **aprovada pela empresa** e **o site já está no ar oficialmente**.  
+Todas as funcionalidades e atualizações estão sendo **desenvolvidas e mantidas ativamente por mim**, com melhorias frequentes tanto no site quanto no sistema interno.
+
+Criei também uma **versão protegida** para fins de portfólio, com dados fictícios e visuais genéricos, respeitando a confidencialidade das informações reais da empresa.
 
 ---
 
@@ -37,34 +40,31 @@ A empresa **adorou a proposta** e encaminhou o projeto para o **Head de TI**, qu
 
 ---
 
-## 🔄 Decisão Final
+## 🌐 Links
 
-Apesar da aprovação técnica, a empresa optou por **migrar o projeto para a plataforma WordPress**, com o objetivo de permitir que a própria equipe interna possa realizar futuras alterações e atualizações **sem depender diretamente de um programador**.
+🔗 **Versão protegida para portfólio (dados fictícios)**:  
+[https://site-vipnautica--eight.vercel.app/](https://site-vipnautica--eight.vercel.app/)
 
-Ainda assim, o projeto original serviu como **base estrutural e visual** para a nova versão no WordPress.
-
----
-
-## 🌐 Link do Projeto
-
-Você pode acessar a versão original desenvolvida por mim aqui:  
-🔗 [https://site-vipnautica--eight.vercel.app/](https://site-vipnautica--eight.vercel.app/)
+🔗 **Site oficial da empresa (em produção)**:  
+[https://www.vipnautica.com.br](https://www.vipnautica.com.br)
 
 ---
 
 ## 🔒 Sistema Interno
 
-Além do site, também desenvolvi **um sistema exclusivo para a VIP Náutica**, totalmente funcional e em produção, utilizado para fins operacionais internos da empresa.  
-Por conter **informações sensíveis**, este sistema **não está disponível publicamente no GitHub**.
+Além do site, desenvolvi também **um sistema exclusivo de controle de embarcações**, utilizado diariamente pela equipe da VIP Náutica.  
+Esse sistema gerencia processos operacionais internos e, por conter **informações sensíveis**, **não está disponível publicamente no GitHub**.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas (no projeto original)
+## 🛠️ Tecnologias Utilizadas
 
 - HTML5 / CSS3 / JavaScript  
 - Figma (para prototipação)  
-- Metodologias ágeis e organização modular de componentes
+- Organização modular de código  
+- Boas práticas de UX/UI  
+- Metodologias ágeis na condução do projeto
 
 ---
 
-Feito com 💙 por Danilo Lima Cruz @Dlima15
+💙 **Desenvolvido com carinho, estratégia e muita proatividade por [Danilo Lima Cruz](https://github.com/dlima15)**
