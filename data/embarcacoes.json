@@ -682,7 +682,21 @@
     "valor": "R$ 6.500.000,00",
     "anuncio": "INTERMARINE 60 / 2014",
     "fotos": [
-      "https://vipnautica.com.br/wp-content/uploads/2025/01/intermarine-60.jpg"
+      "../assets/img/embarcacoes/3295/1.jpeg",
+      "../assets/img/embarcacoes/3295/1 (1).jpeg",
+      "../assets/img/embarcacoes/3295/1 (2).jpeg",
+      "../assets/img/embarcacoes/3295/1 (3).jpeg",
+      "../assets/img/embarcacoes/3295/1 (4).jpeg",
+      "../assets/img/embarcacoes/3295/1 (5).jpeg",
+      "../assets/img/embarcacoes/3295/1 (5).jpeg",
+      "../assets/img/embarcacoes/3295/1 (6).jpeg",
+      "../assets/img/embarcacoes/3295/1 (7).jpeg",
+      "../assets/img/embarcacoes/3295/1 (8).jpeg",
+      "../assets/img/embarcacoes/3295/1 (9).jpeg",
+      "../assets/img/embarcacoes/3295/1 (10).jpeg",
+      "../assets/img/embarcacoes/3295/1 (11).jpeg",
+      "../assets/img/embarcacoes/3295/1 (12).jpeg",
+      "../assets/img/embarcacoes/3295/1 (13).jpeg"
     ],
     "acessorios": [
       "AR-CONDICIONADO",
@@ -1266,79 +1280,6 @@
       "Bomba de água doce",
       "Sistema de Incêndio",
       "Duas baterias"
-    ]
-  },
-  "3498": {
-    "fabricante": "AZIMUT",
-    "modelo": "AZIMUT 43",
-    "ano": "2011",
-    "tamanho": "43",
-    "estilo": "",
-    "combustivel": "DIESEL",
-    "motor": "2 X CUMMINS 480 HP",
-    "horas": "1216",
-    "valor": "R$ 2.300.000,00",
-    "anuncio": "AZIMUT 43 / 2011",
-    "fotos": [
-      "https://vipnautica.com.br/wp-content/uploads/2025/03/IMG-20250320-WA0043-1110x577.jpg"
-    ],
-    "acessorios": [
-      "TV",
-      "SOUND BAR",
-      "SOM NO FLY",
-      "SKY",
-      "RADAR",
-      "PONTE HIDRÁULICA",
-      "PLATAFORMA SUBMERGÍVEL",
-      "PILOTO AUTOMÁTICO",
-      "MICROONDAS",
-      "MESA DA SALA ELÉTRICA",
-      "GPS",
-      "GERADOR",
-      "GELADEIRA",
-      "FREEZER",
-      "FOGÃO",
-      "FECHAMENTO TOTAL DO FLY",
-      "FECHAMENTO DE POPA",
-      "CHURRASQUEIRA ELÉTRICA",
-      "CARRETA",
-      "CAMA DE CASAL NA SALA QUE SAI DE BAIXO DO SOFÁ",
-      "CAIXA DE SOM NA PROA"
-    ]
-  },
-  "3510": {
-    "fabricante": "INTERMARINE",
-    "modelo": "CIGARRETTE",
-    "ano": "1991",
-    "tamanho": "36",
-    "estilo": "",
-    "combustivel": "DIESEL",
-    "motor": "2 X VOLVO 200 HP",
-    "horas": "160",
-    "valor": "R$ Ñ",
-    "anuncio": "CIGARRETTE / 1991",
-    "fotos": [
-      "https://vipnautica.com.br/wp-content/uploads/2025/04/WhatsApp-Image-2025-04-16-at-17.13.12-4-1110x577.jpeg"
-    ],
-    "acessorios": [
-      "RÁDIO VHF",
-      "GUINCHO ELET novo.",
-      "ECO SONDA",
-      "BÚSSOLA",
-      "CD PLAYER",
-      "GELEIRA",
-      "CAPOTA RETRATIL",
-      "FECHAMENTO FRONTAL E LATERAL",
-      "SALVATEGEM COMPLETA",
-      "CARRETA DE ENCALHE",
-      "CARREGADOR DE BATERIA",
-      "INVERSO",
-      "TOMADA DE CAIS",
-      "TEKA NA PLATAFORMA",
-      "STROBO LIGHT",
-      "LUZ SUB-AQUTICA",
-      "SOLÁRIO DE PROA",
-      "ESCADA INTERNA PARA IR PARA PROA"
     ]
   },
   "3512": {
@@ -2190,7 +2131,13 @@
     "valor": "R$ 740.000,00",
     "anuncio": "FOCKER 305 / 2024",
     "fotos": [
-      "https://vipnautica.com.br/wp-content/uploads/2025/05/q-1110x577.jpeg"
+      "../assets/img/embarcacoes/3546/1.jpeg",
+      "../assets/img/embarcacoes/3546/1 (1).jpeg",
+      "../assets/img/embarcacoes/3546/1 (2).jpeg",
+      "../assets/img/embarcacoes/3546/1 (3).jpeg",
+      "../assets/img/embarcacoes/3546/1 (4).jpeg",
+      "../assets/img/embarcacoes/3546/1 (5).jpeg",
+      "../assets/img/embarcacoes/3546/1 (6).jpeg"
     ],
     "acessorios": [
       "GPS",
@@ -2215,45 +2162,6 @@
       "Salvatagem completa"
     ]
   },
-  "3548": {
-    "fabricante": "FIBRAFORT",
-    "modelo": "FOCKER 330",
-    "ano": "2024",
-    "tamanho": "330",
-    "estilo": "",
-    "combustivel": "GASOLINA",
-    "motor": "2 X MERCRUISER 250 HP",
-    "horas": "84",
-    "valor": "R$ 950.000,00",
-    "anuncio": "FOCKER 330 / 2024",
-    "fotos": [
-      "https://vipnautica.com.br/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-07-at-10.28.43-2-1110x577.jpeg"
-    ],
-    "acessorios": [
-      "Gerador Netuno",
-      "GPS",
-      "Som mega ultra potente",
-      "VHF",
-      "Acionamento de extintor à distância",
-      "Bússola",
-      "TV",
-      "Farol",
-      "Alarme de alagamento",
-      "Salvatagem",
-      "Toldo",
-      "Fechamento Total",
-      "Guincho elétrico âncora",
-      "Carregador de bateria",
-      "Carreta",
-      "Ar condicionado",
-      "Tomada de cais",
-      "Geladeira",
-      "Solarium de proa",
-      "Buzina",
-      "Boia circular com retinida e facho",
-      "6 defensas"
-    ]
-  },
   "3550": {
     "fabricante": "INTERMARINE",
     "modelo": "INTERMARINE 62",
@@ -2266,7 +2174,17 @@
     "valor": "R$ 9.500.000,00",
     "anuncio": "INTERMARINE 62 / 2018",
     "fotos": [
-      "https://vipnautica.com.br/wp-content/uploads/2025/05/1-1-929x577.jpeg"
+      "../assets/img/embarcacoes/3550/1.jpeg",
+      "../assets/img/embarcacoes/3550/1 (1).jpeg",
+      "../assets/img/embarcacoes/3550/1 (2).jpeg",
+      "../assets/img/embarcacoes/3550/1 (3).jpeg",
+      "../assets/img/embarcacoes/3550/1 (4).jpeg",
+      "../assets/img/embarcacoes/3550/1 (5).jpeg",
+      "../assets/img/embarcacoes/3550/1 (6).jpeg",
+      "../assets/img/embarcacoes/3550/1 (7).jpeg",
+      "../assets/img/embarcacoes/3550/1 (8).jpeg",
+      "../assets/img/embarcacoes/3550/1 (9).jpeg",
+      "../assets/img/embarcacoes/3550/1 (10).jpeg"
     ],
     "acessorios": [
       "Estabilizador Seakeeper",
@@ -2332,7 +2250,19 @@
     "valor": "R$ 1.500.000,00",
     "anuncio": "SESSA C-36 / 2018",
     "fotos": [
-      "https://vipnautica.com.br/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-13-at-09.22.43-1110x577.jpeg"
+      "../assets/img/embarcacoes/3556/1.jpeg",
+      "../assets/img/embarcacoes/3556/1 (1).jpeg",
+      "../assets/img/embarcacoes/3556/1 (2).jpeg",
+      "../assets/img/embarcacoes/3556/1 (3).jpeg",
+      "../assets/img/embarcacoes/3556/1 (4).jpeg",
+      "../assets/img/embarcacoes/3556/1 (5).jpeg",
+      "../assets/img/embarcacoes/3556/1 (6).jpeg",
+      "../assets/img/embarcacoes/3556/1 (7).jpeg",
+      "../assets/img/embarcacoes/3556/1 (8).jpeg",
+      "../assets/img/embarcacoes/3556/1 (9).jpeg",
+      "../assets/img/embarcacoes/3556/1 (10).jpeg",
+      "../assets/img/embarcacoes/3556/1 (11).jpeg",
+      "../assets/img/embarcacoes/3556/1 (12).jpeg"
     ],
     "acessorios": [
       "Carreta nova",
@@ -2359,11 +2289,16 @@
     "valor": "R$ 269.900,00",
     "anuncio": "FOCKER 242 GTO / Ñ",
     "fotos": [
-      "https://vipnautica.com.br/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-12-at-13.24.47-1-1110x577.jpeg"
+      "../assets/img/embarcacoes/3558/1.jpeg",
+      "../assets/img/embarcacoes/3558/1 (1).jpeg",
+      "../assets/img/embarcacoes/3558/1 (2).jpeg",
+      "../assets/img/embarcacoes/3558/1 (3).jpeg",
+      "../assets/img/embarcacoes/3558/1 (4).jpeg",
+      "../assets/img/embarcacoes/3558/1 (5).jpeg"
     ],
     "acessorios": [
       "Joystick",
-      "Volvo glass Cokpit 12’",
+      "Volvo glass Cokpit 12",
       "Ar externo",
       "Ar interno",
       "Teka total",
@@ -2386,7 +2321,22 @@
     "valor": "R$ 2.800.000,00",
     "anuncio": "INTERMARINE 520 FULL / 2005",
     "fotos": [
-      "https://vipnautica.com.br/wp-content/uploads/2025/05/1-2-1110x577.jpeg"
+      "../assets/img/embarcacoes/3560/1.jpeg",
+      "../assets/img/embarcacoes/3560/1 (1).jpeg",
+      "../assets/img/embarcacoes/3560/1 (2).jpeg",
+      "../assets/img/embarcacoes/3560/1 (3).jpeg",
+      "../assets/img/embarcacoes/3560/1 (4).jpeg",
+      "../assets/img/embarcacoes/3560/1 (5).jpeg",
+      "../assets/img/embarcacoes/3560/1 (6).jpeg",
+      "../assets/img/embarcacoes/3560/1 (7).jpeg",
+      "../assets/img/embarcacoes/3560/1 (8).jpeg",
+      "../assets/img/embarcacoes/3560/1 (9).jpeg",
+      "../assets/img/embarcacoes/3560/1 (10).jpeg",
+      "../assets/img/embarcacoes/3560/1 (11).jpeg",
+      "../assets/img/embarcacoes/3560/1 (12).jpeg",
+      "../assets/img/embarcacoes/3560/1 (13).jpeg",
+      "../assets/img/embarcacoes/3560/1 (14).jpeg",
+      "../assets/img/embarcacoes/3560/1 (15).jpeg"
     ],
     "acessorios": [
       "Ar Condicionado",
