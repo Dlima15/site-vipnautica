@@ -3267,5 +3267,52 @@
       "SOLÁRIO DE PROA",
       "EXTENSÃO TOMADA DE CAIS"
     ]
+  },
+  "3604": {
+    "fabricante": "NX",
+    "modelo": "NX 360 HORIZON",
+    "ano": "2021",
+    "tamanho": "",
+    "estilo": "",
+    "combustivel": "GASOLINA",
+    "motor": "2 X MERCRUISER 300 HP",
+    "horas": "260",
+    "valor": "R$ 950.000,00",
+    "anuncio": "",
+    "fotos": [
+      "../assets/img/embarcacoes/3604/1.jpeg",
+      "../assets/img/embarcacoes/3604/1 (1).jpeg",
+      "../assets/img/embarcacoes/3604/1 (2).jpeg",
+      "../assets/img/embarcacoes/3604/1 (3).jpeg",
+      "../assets/img/embarcacoes/3604/1 (4).jpeg",
+      "../assets/img/embarcacoes/3604/1 (5).jpeg",
+      "../assets/img/embarcacoes/3604/1 (6).jpeg"
+    ],
+    "acessorios": [
+      "GERADOR",
+      "AR CONDICIONADO",
+      "TV",
+      "MICROONDAS",
+      "TEKA COMPLETA",
+      "TOLDO STOBAG",
+      "FECHAMENTO TOTAL",
+      "GPS",
+      "RÁDIO VHF",
+      "FLAPS",
+      "SOM",
+      "STROBO",
+      "TETO SOLAR HT",
+      "CARRETA RODO ENCALHE",
+      "GUINCHO ELÉTRICO",
+      "CHURRASQUEIRA",
+      "ÁREA GOURMET",
+      "CARREGADOR DE BATERIAS",
+      "MESA DO COCKPIT",
+      "SKYHOOK",
+      "FOGÃO",
+      "ADEGA",
+      "CAMAROTE FECHADO",
+      "BANHEIRO COM BOX"
+    ]
   }
 }

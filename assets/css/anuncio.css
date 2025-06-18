@@ -194,8 +194,16 @@
   
   .foto-barco {
     width: 100%;
+    max-width: 700px;        /* largura máxima horizontal */
+    height: 400px;           /* altura fixa */
+    object-fit: cover;       /* cobre a área mantendo a proporção */
+    object-position: center; /* centraliza a imagem dentro da caixa */
     border-radius: 10px;
-  }
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: block;
+    margin: 0 auto;          /* centraliza horizontalmente */
+    transition: all 0.3s ease;
+}
   
   .btn-nav {
     position: absolute;
