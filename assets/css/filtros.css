@@ -6,6 +6,21 @@
     border: 0;
     box-sizing: border-box;
   }
+
+    /* Variáveis CSS para cores e fontes */
+:root {
+    --primary-blue: #010649;
+    --dark-blue: #000c50;
+    --accent-yellow: #eea800;
+    --light-yellow: #ffcc00;
+    --success-green: #58b660;
+    --light-green: #6cd373;
+    --text-dark: #333;
+    --text-light: #f4f4f4;
+    --bg-light: #ffffff;
+    --bg-dark: #f0f2f5; /* Um cinza claro para seções */
+    --font-primary: 'Poppins', sans-serif;
+}
   
   body {
     margin: 0;
@@ -696,3 +711,74 @@
     font-size: 0.9em;
   }
 }
+
+/* footer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+.footer-simples {
+  background-color: var(--primary-blue);
+  color: #fff;
+  padding: 10px 0;
+  font-family: Arial, sans-serif;
+  font-size: 0.85em;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-conteudo {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-simples p {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 8px;
+  white-space: nowrap;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.separador {
+  color: #ccc;
+  font-weight: bold;
+}
+
+@media (min-width: 600px) {
+  .footer-conteudo {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .footer-simples p {
+    margin: 0;
+  }
+  .footer-links {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-links {
+    flex-direction: column;
+  }
+  .footer-links a {
+    margin: 3px 0;
+  }
+  .separador {
+    display: none;
+  }
+}
+/* footer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/

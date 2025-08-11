@@ -82,6 +82,26 @@ fetch("../data/embarcacoes.json")
     console.log("Caminhos das fotos:", fotos); // Exibe os caminhos das fotos no console para depuração
     mostrarFoto(fotoIndex); // Exibe a primeira foto ao carregar a página
 
+    // Miniaturas:
+    const miniaturasContainer = document.getElementById('miniaturas');
+    miniaturasContainer.innerHTML = '';
+
+    fotos.forEach((foto, index) => {
+      const imgMini = document.createElement('img');
+      imgMini.src = foto;
+      imgMini.classList.add('miniatura');
+      if (index === 0) imgMini.classList.add('ativa');
+
+      imgMini.onclick = () => {
+        mostrarFoto(index);
+        document.querySelectorAll('.miniatura').forEach(el => el.classList.remove('ativa'));
+        imgMini.classList.add('ativa');
+      };
+
+      miniaturasContainer.appendChild(imgMini);
+    });
+
+
     // Preenche a seção de acessórios
     const acessoriosContainer = document.getElementById('acessorios');
     const metade = Math.ceil(barco.acessorios.length / 2); // Calcula a metade do número de acessórios para dividir em duas colunas

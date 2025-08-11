@@ -1,12 +1,18 @@
 // JS da Home
+import { aplicarLazyLoadBlur } from './lazyLoadBlur.js';
+
 console.log("home.js carregado");
 
+document.addEventListener("DOMContentLoaded", () => {
+  aplicarLazyLoadBlur();
+});
+
+
+
 // --- Funcionalidade de Carrossel ---
-function scrollCarousel(carrosselId, direction) {
-    const carousel = document.getElementById(carrosselId);
-    const scrollAmount = 300; // ajuste conforme necessário
-    carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-}
+import { scrollCarousel } from './scroll.js';
+
+window.scrollCarousel = scrollCarousel;
 
 // --- Funcionalidade de Scroll Suave para Links Internos ---
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

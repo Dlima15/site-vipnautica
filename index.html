@@ -9,6 +9,7 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
   <!-- CSS personalizado -->
   <link rel="icon" href="./assets/img/1-Logomarca VIP Azul copy.png" type="image/x-icon">
@@ -30,29 +31,45 @@
     }
   </style>
 
+  <!-- Google tag (gtag.js) Licenca Google - Dev Danilo Lima -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-967900075"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-967900075');
+  </script>
+
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <a href="./index.html"><img src="./assets/img/LOGOVIP.png" alt="Logo VUIP Náutica" /></a>
+ <header class="vip-header">
+    <div class="container">
+      <a href="./index.html" class="logo">
+        <img src="./assets/img/LOGOVIP.png" alt="Logo VIP Náutica">
+      </a>
 
-    <nav class="menu">
-      <ul>
-        <li><a href="#novos"><img src="./assets/img/icon header.svg" alt=""> Barcos Novos  <span class="marca-sub">Focker</span> | </a></li>
-        <li><a href="#seminovos"><img src="./assets/img/icon header.svg" alt=""> Barcos Seminovos <span class="marca-sub">Multimarcas</span> |</a></li>
-        <li><a href="#contato"><img src="./assets/img/email contato.svg" alt=""> Contato |</a></li>
-        <li><a href="#sobre-nos">Sobre nós</a></li>
-      </ul>
-    </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <img src="./assets/img/nav.png" alt="Menu" height="28">
+      </button>
 
-    <div class="buttons-header">
-      <a class="bt-hd-1" href="https://wa.link/fpv4of">Venda sua Lancha!</a>
-      <a class="bt-hd-2" href="https://wa.link/6tl9hh">Fale conosco!</a>
+      <nav class="nav" id="navMenu">
+        <ul>
+          <li><a href="#novos">Barcos Novos <span class="marca-sub">Focker</span></a></li>
+          <li><a href="#seminovos">Barcos Seminovos <span class="marca-sub">Multimarcas</span></a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#sobre-nos">Sobre nós</a></li>
+          <li><a class="bt-hd-1" href="https://wa.link/fpv4of">Venda sua Lancha!</a></li>
+          <li><a class="bt-hd-2" href="https://wa.link/6tl9hh">Fale conosco!</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
+
+
   <!-- Capa com Carrossel -->
   <section class="capa">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2000">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -64,30 +81,30 @@
   <div class="carousel-item active">
     <picture>
       <!-- Mobile -->
-      <source srcset="./assets/img/capa/capamobile1.png" media="(max-width: 768px)">
+      <source srcset="./assets/img/capa/capamobile1.webp" media="(max-width: 768px)">
       <!-- Desktop -->
-      <img class="d-block w-100" src="./assets/img/capa/capa1.png" alt="Primeiro Slide">
+      <img class="d-block w-100" src="./assets/img/capa/capa1.webp" alt="Primeiro Slide">
     </picture>
   </div>
   
   <div class="carousel-item">
     <picture>
-      <source srcset="./assets/img/capa/capamobile2.png" media="(max-width: 768px)">
-      <img class="d-block w-100" src="./assets/img/capa/capa2.png" alt="Segundo Slide">
+      <source srcset="./assets/img/capa/capamobile2.webp" media="(max-width: 768px)">
+      <img class="d-block w-100" src="./assets/img/capa/capa2.webp" alt="Segundo Slide">
     </picture>
   </div>
   
   <div class="carousel-item">
     <picture>
-      <source srcset="./assets/img/capa/capamobile3.png" media="(max-width: 768px)">
-      <img class="d-block w-100" src="./assets/img/capa/capa3.png" alt="Terceiro Slide">
+      <source srcset="./assets/img/capa/capamobile3.webp" media="(max-width: 768px)">
+      <img class="d-block w-100" src="./assets/img/capa/capa3.webp" alt="Terceiro Slide">
     </picture>
   </div>
 
   <div class="carousel-item">
     <picture>
-      <source srcset="./assets/img/capa/capamobile4.png" media="(max-width: 768px)">
-      <img class="d-block w-100" src="./assets/img/capa/capa4.png" alt="Terceiro Slide">
+      <source srcset="./assets/img/capa/capamobile4.webp" media="(max-width: 768px)">
+      <img class="d-block w-100" src="./assets/img/capa/capa4.webp" alt="Terceiro Slide">
     </picture>
   </div>
 </div>
@@ -102,30 +119,30 @@
       </a>
     </div>
   </section>
+  <div class="button-ft-sm">
+      <a class="button-seminovos" href="./pages/filtros.html">Filtre sua busca</a>
+    </div> 
+  <div class="line"></div> 
   <section id="seminovos" class="carrosel-barcos">
-     <h2>Seminovos | <span class="marca-fina">Multimarcas</span></h2>
-     <div class="button-ft-sm">
-      <a class="button-seminovos" href="./pages/filtros.html">clique para Ver todas embarcações</a>
-    </div>  
-    <div class="line"></div>
+     <h2>Seminovos | <span class="marca-fina">Multimarcas </span><br><span class="marca-maisfina">Oportunidades</span></span></h2>
     <div class="carrossel-container">
       <button class="btn-nav left" onclick="scrollCarousel('carrossel-seminovos', -1)">&#10094;</button>
       
       <div class="carrossel" id="carrossel-seminovos">
         <!-- Cards de Barcos -->
         <div class="card-barco">
-          <img src="./assets/img/embarcacoes/3413/1.jpeg" alt="Ferretti 50" />
+          <img src="./assets/img/embarcacoes/3652/1.jpeg" alt="Ferretti 50" />
           <div class="info">
-            <p class="sku">SKU #3413</p>
-            <h3>Aimut 56</h3>
-            <p class="motor">2 X VOLVO D-11 725 HP</p>
-            <p class="preco">R$ 8.000.000,00
+            <p class="sku">SKU #3652</p>
+            <h3>Intermarine 600 Full</h3>
+            <p class="motor">2 X MAN 800 HP</p>
+            <p class="preco">Sob consulta
 </p>
             <div class="line-detalhes"></div>
             <div class="detalhes">
-              <span><strong>Tamanho</strong><br>56 Pés</span>
-              <span><strong>Ano</strong><br>2019</span>
-              <span><strong>Horas</strong><br>546 h</span>
+              <span><strong>Tamanho</strong><br>60 Pés</span>
+              <span><strong>Ano</strong><br>2006</span>
+              <span><strong>Horas</strong><br>1.600 h</span>
               <span><strong>Combustível</strong><br>Diesel</span>
             </div>
           </div>
@@ -137,7 +154,7 @@
             <p class="sku">SKU #3544</p>
             <h3>Azimut 62</h3>
             <p class="motor">2 X VOLVO D-13 100 HP</p>
-            <p class="preco">R$ 15.000.000</p>
+            <p class="preco">Sob consulta</p>
             <div class="line-detalhes"></div>
             <div class="detalhes">
               <span><strong>Tamanho</strong><br>62 Pés</span>
@@ -149,18 +166,18 @@
         </div>
   
         <div class="card-barco"> <!-- Card 3 -->
-          <img src="./assets/img/embarcacoes/3540/1.jpeg" alt="Ferretti 50" />
+          <img src="./assets/img/embarcacoes/3674/1.jpeg" alt="Ferretti 50" />
           <div class="info">
-            <p class="sku">SKU #3540</p>
-            <h3>Sessa F42</h3>
-            <p class="motor">2 X VOLVO D-6 IPS 600</p>
-            <p class="preco">R$ 3.800.000</p>
+            <p class="sku">SKU #3674</p>
+            <h3>Focker 366 GTS</h3>
+            <p class="motor">2 X MERCRUISER 6.2 DTS 300 HP</p>
+            <p class="preco">Sob consulta</p>
             <div class="line-detalhes"></div>
             <div class="detalhes">
-              <span><strong>Tamanho</strong><br>42 Pés</span>
-              <span><strong>Ano</strong><br>2021</span>
-              <span><strong>Horas</strong><br>400h</span>
-              <span><strong>Combustível</strong><br>Diesel</span>
+              <span><strong>Tamanho</strong><br>36 Pés</span>
+              <span><strong>Ano</strong><br>2025</span>
+              <span><strong>Horas</strong><br>27h</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
             </div>
           </div>
         </div>
@@ -171,7 +188,7 @@
             <p class="sku">SKU #3538</p>
             <h3>SCHAEFER 450</h3>
             <p class="motor">2 X VOLVO IPS 600 HP</p>
-            <p class="preco">R$ 6.000.000</p>
+            <p class="preco">Sob consulta</p>
             <div class="line-detalhes"></div>
             <div class="detalhes">
               <span><strong>Tamanho</strong><br>45 Pés</span>
@@ -183,38 +200,88 @@
         </div>
   
         <div class="card-barco"> <!-- Card 5 -->
-          <img src="./assets/img/embarcacoes/3526/1.jpeg" alt="Ferretti 50" />
+          <img src="./assets/img/embarcacoes/3620/1.jpg" alt="Ferretti 50" />
           <div class="info">
-            <p class="sku">SKU #3526</p>
-            <h3>INTERMARINE 60</h3>
-            <p class="motor">2 X VOLVO D-13 900 HP</p>
-            <p class="preco">R$ 6.200.000</p>
+            <p class="sku">SKU #3620</p>
+            <h3>FOCKER 230</h3>
+            <p class="motor">2 X MERCRUISER 4.5 200 HP</p>
+            <p class="preco">Sob consulta</p>
             <div class="line-detalhes"></div>
             <div class="detalhes">
-              <span><strong>Tamanho</strong><br>60 Pés</span>
-              <span><strong>Ano</strong><br>2014</span>
-              <span><strong>Horas</strong><br>470h</span>
-              <span><strong>Combustível</strong><br>Diesel</span>
+              <span><strong>Tamanho</strong><br>23 Pés</span>
+              <span><strong>Ano</strong><br>2018</span>
+              <span><strong>Horas</strong><br>106h</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
             </div>
           </div>
         </div>
   
         <div class="card-barco"> <!-- Card 6 -->
-          <img src="./assets/img/embarcacoes/3464/1.jpg" alt="Ferretti 50" />
+          <img src="./assets/img/embarcacoes/3616/1.jpg" alt="Ferretti 50" />
           <div class="info">
-            <p class="sku">SKU 3464</p>
-            <h3>INTERMARINE 50</h3>
-            <p class="motor">2 X CUMMINS 600 HP</p>
-            <p class="preco">R$ 5.500.000</p>
+            <p class="sku">SKU 3616</p>
+            <h3>VENTURA 265</h3>
+            <p class="motor">1 X VOLVO 280 HP</p>
+            <p class="preco">Sob consulta</p>
             <div class="line-detalhes"></div>
             <div class="detalhes">
-              <span><strong>Tamanho</strong><br>50 Pés</span>
-              <span><strong>Ano</strong><br>2015</span>
-              <span><strong>Horas</strong><br>600h</span>
+              <span><strong>Tamanho</strong><br>26 Pés</span>
+              <span><strong>Ano</strong><br>2021</span>
+              <span><strong>Horas</strong><br>160h</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-barco"> <!-- Card 7 -->
+          <img src="./assets/img/embarcacoes/3550/1.jpeg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU 3550</p>
+            <h3>INTERMARINE 62</h3>
+            <p class="motor">2 X VOLVO 1350 IPS</p>
+            <p class="preco">Sob consulta</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>62 Pés</span>
+              <span><strong>Ano</strong><br>2018</span>
+              <span><strong>Horas</strong><br>890h</span>
               <span><strong>Combustível</strong><br>Diesel</span>
             </div>
           </div>
         </div>
+        <div class="card-barco"> <!-- Card 8 -->
+          <img src="./assets/img/embarcacoes/3640/1.jpeg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU 3640</p>
+            <h3>FOCKER 188 JOY</h3>
+            <p class="motor">1 X MERCURY 100 HP 4T</p>
+            <p class="preco">Sob consulta</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>18 Pés</span>
+              <span><strong>Ano</strong><br>2023</span>
+              <span><strong>Horas</strong><br>80</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-barco"> <!-- Card 9 -->
+          <img src="./assets/img/embarcacoes/3606/1.jpeg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU 3606</p>
+            <h3>BENETEAU 40 HT</h3>
+            <p class="motor">2 X VOLVO D-4 300 HP</p>
+            <p class="preco">Sob consulta</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>40 Pés</span>
+              <span><strong>Ano</strong><br>2014</span>
+              <span><strong>Horas</strong><br>800h</span>
+              <span><strong>Combustível</strong><br>Diesel</span>
+            </div>
+          </div>
+        </div>
+        
       </div>
   
       <button class="btn-nav right" onclick="scrollCarousel('carrossel-seminovos', 1)">&#10095;</button>
@@ -227,102 +294,48 @@
       <button class="btn-nav left" onclick="scrollCarousel('carrossel-novos', -1)">&#10094;</button>
       
       <div class="carrossel" id="carrossel-novos">
-        <!-- Cards de Barcos -->
-        <div class="card-barco">
-          <img src="./assets/img/embarcacoes/oe001/1.jpg"Ferretti 50" />
-          <div class="info">
-            <p class="sku">SKU #OE001</p>
-            <h3>FOCKER 188 JOY</h3>
-            <p class="motor">1 X 100 HP</p>
-            <p class="preco">R$ 208.989</p>
-            <div class="line-detalhes"></div>
-            <div class="detalhes">
-              <span><strong>Tamanho</strong><br>18 Pés</span>
-              <span><strong>Ano</strong><br>2025/ZERO</span>
-              <span><strong>Horas</strong><br>0h</span>
-              <span><strong>Combustível</strong><br>Gasolina</span>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Copie e cole mais 5 cards iguais acima -->
-        <!-- Substitua os dados se quiser, pra diferenciar -->
-  
-        <div class="card-barco"> <!-- Card 2 -->
-          <img src="./assets/img/embarcacoes/oe005/1.png" alt="Ferretti 50" />
-          <div class="info">
-            <p class="sku">SKU #OE005</p>
-            <h3>FOCKER 242 GTC</h3>
-            <p class="motor">1 X MERCRUISER 250 HP</p>
-            <p class="preco">R$ 461.899</p>
-            <div class="line-detalhes"></div>
-            <div class="detalhes">
-              <span><strong>Tamanho</strong><br>24 Pés</span>
-              <span><strong>Ano</strong><br>2025/ZERO</span>
-              <span><strong>Horas</strong><br>0h</span>
-              <span><strong>Combustível</strong><br>Gasolina</span>
-            </div>
-          </div>
-        </div>
-  
+
          <div class="card-barco"> <!-- Card 4 -->
-          <img src="./assets/img/embarcacoes/oe013/1.jpg" alt="Ferretti 50" />
+          <img src="https://www.fibrafort.com.br/site/uploads/2025/02/420-1.webp" alt="Ferretti 50" />
           <div class="info">
-            <p class="sku">SKU #OE013</p>
-            <h3>FOCKER 272 GTO</h3>
-            <p class="motor">1 X MERCRUISER 300 HP	</p>
-            <p class="preco">R$ 626.989</p>
+            <p class="sku">SKU #OE025</p>
+            <h3>FOCKER 420 GTS</h3>
+            <p class="motor">2 X 380 HP</p>
+            <p class="preco">Sob consulta</p>
             <div class="line-detalhes"></div>
             <div class="detalhes">
-              <span><strong>Tamanho</strong><br>27 Pés</span>
+              <span><strong>Tamanho</strong><br>38 Pés</span>
               <span><strong>Ano</strong><br>2025/ZERO</span>
               <span><strong>Horas</strong><br>0h</span>
               <span><strong>Combustível</strong><br>Gasolina</span>
             </div>
           </div>
         </div>
-  
+
         <div class="card-barco"> <!-- Card 4 -->
-          <img src="./assets/img/embarcacoes/oe015/1.jpg" alt="Ferretti 50" />
+          <img src="https://www.fibrafort.com.br/site/uploads/2025/02/PSN_1186-T-388-1.webp" alt="Ferretti 50" />
           <div class="info">
-            <p class="sku">SKU #OE015</p>
-            <h3>FOCKER 300 GTx</h3>
-            <p class="motor">2 X MERCRUISER 300 HP</p>
-            <p class="preco">R$ 1.044.000</p>
+            <p class="sku">SKU #OE026</p>
+            <h3>FOCKER 388 GTS</h3>
+            <p class="motor">2 X 380 HP2 X 380 HP</p>
+            <p class="preco">Sob consulta</p>
             <div class="line-detalhes"></div>
             <div class="detalhes">
-              <span><strong>Tamanho</strong><br>30 Pés</span>
+              <span><strong>Tamanho</strong><br>38 Pés</span>
               <span><strong>Ano</strong><br>2025/ZERO</span>
               <span><strong>Horas</strong><br>0h</span>
               <span><strong>Combustível</strong><br>Gasolina</span>
             </div>
           </div>
         </div>
-  
-        <div class="card-barco"> <!-- Card 4 -->
-          <img src="./assets/img/embarcacoes/OE021/1.jpg" alt="Ferretti 50" />
-          <div class="info">
-            <p class="sku">SKU #OE021</p>
-            <h3>FOCKER 333 GTS</h3>
-            <p class="motor">2 X MERCRUISER 250 HP</p>
-            <p class="preco">R$ 1.099.989</p>
-            <div class="line-detalhes"></div>
-            <div class="detalhes">
-              <span><strong>Tamanho</strong><br>33 Pés</span>
-              <span><strong>Ano</strong><br>2025/ZERO</span>
-              <span><strong>Horas</strong><br>0h</span>
-              <span><strong>Combustível</strong><br>Gasolina</span>
-            </div>
-          </div>
-        </div>
-  
-         <div class="card-barco"> <!-- Card 4 -->
+
+           <div class="card-barco"> <!-- Card 4 -->
           <img src="./assets/img/embarcacoes/oe023/1.jpg" alt="Ferretti 50" />
           <div class="info">
             <p class="sku">SKU #OE023</p>
             <h3>FOCKER 366 GTS</h3>
             <p class="motor">2 X MERCRUISER 270 HP</p>
-            <p class="preco">R$ 1.869.000</p>
+            <p class="preco">Sob consulta</p>
             <div class="line-detalhes"></div>
             <div class="detalhes">
               <span><strong>Tamanho</strong><br>36 Pés</span>
@@ -332,23 +345,292 @@
             </div>
           </div>
         </div>
-  
+
+        
+        <div class="card-barco"> <!-- Card 4 -->
+          <img src="./assets/img/embarcacoes/OE021/1.jpg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #OE021</p>
+            <h3>FOCKER 333 GTS</h3>
+            <p class="motor">2 X MERCRUISER 250 HP</p>
+            <p class="preco">Sob consulta</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>33 Pés</span>
+              <span><strong>Ano</strong><br>2025/ZERO</span>
+              <span><strong>Horas</strong><br>0h</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
+            </div>
+          </div>
+        </div>
+
+         <div class="card-barco"> <!-- Card 4 -->
+          <img src="./assets/img/embarcacoes/oe015/1.jpg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #OE015</p>
+            <h3>FOCKER 300 GTx</h3>
+            <p class="motor">2 X MERCRUISER 300 HP</p>
+            <p class="preco">Sob consulta</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>30 Pés</span>
+              <span><strong>Ano</strong><br>2025/ZERO</span>
+              <span><strong>Horas</strong><br>0h</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
+            </div>
+          </div>
+        </div>
+
+           <div class="card-barco"> <!-- Card 4 -->
+          <img src="./assets/img/embarcacoes/oe013/1.jpg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #OE013</p>
+            <h3>FOCKER 272 GTO</h3>
+            <p class="motor">1 X MERCRUISER 300 HP	</p>
+            <p class="preco">Sob consulta</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>27 Pés</span>
+              <span><strong>Ano</strong><br>2025/ZERO</span>
+              <span><strong>Horas</strong><br>0h</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
+            </div>
+          </div>
+        </div>
+
+          <div class="card-barco"> <!-- Card 2 -->
+          <img src="./assets/img/embarcacoes/oe011/1.jpg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #OE007<div id="OE011"></div></p>
+            <h3>FOCKER 255 GTO</h3>
+            <p class="motor">1 X 220 HP	</p>
+            <p class="preco">Sob consulta</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>25 Pés</span>
+              <span><strong>Ano</strong><br>2025/ZERO</span>
+              <span><strong>Horas</strong><br>0h</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
+            </div>
+          </div>
+        </div>
+
+            <div class="card-barco"> <!-- Card 2 -->
+          <img src="./assets/img/embarcacoes/oe005/1.png" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #OE005</p>
+            <h3>FOCKER 242 GTC</h3>
+            <p class="motor">1 X MERCRUISER 250 HP</p>
+            <p class="preco">Sob consulta</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>24 Pés</span>
+              <span><strong>Ano</strong><br>2025/ZERO</span>
+              <span><strong>Horas</strong><br>0h</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
+            </div>
+          </div>
+        </div>
+
+         <div class="card-barco"> <!-- Card 2 -->
+          <img src="./assets/img/embarcacoes/oe008/1.jpg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #OE008</p>
+            <h3>FOCKER 242 GTO</h3>
+            <p class="motor">1 X MERCRUISER 250 HP</p>
+            <p class="preco">Sob consulta</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>24 Pés</span>
+              <span><strong>Ano</strong><br>2025/ZERO</span>
+              <span><strong>Horas</strong><br>0h</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
+            </div>
+          </div>
+        </div>
+
+          <!-- Cards de Barcos -->
+        <div class="card-barco">
+          <img src="./assets/img/embarcacoes/oe003/1.webp" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #OE003</p>
+            <h3>FOCKER 212 FX	</h3>
+            <p class="motor">1 X 115 HP</p>
+            <p class="preco">Sob consulta</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>21 Pés</span>
+              <span><strong>Ano</strong><br>2025/ZERO</span>
+              <span><strong>Horas</strong><br>0h</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cards de Barcos -->
+        <div class="card-barco">
+          <img src="./assets/img/embarcacoes/oe001/1.jpg" alt="Ferretti 50" />
+          <div class="info">
+            <p class="sku">SKU #OE001</p>
+            <h3>FOCKER 188 JOY</h3>
+            <p class="motor">1 X 100 HP</p>
+            <p class="preco">Sob consulta</p>
+            <div class="line-detalhes"></div>
+            <div class="detalhes">
+              <span><strong>Tamanho</strong><br>18 Pés</span>
+              <span><strong>Ano</strong><br>2025/ZERO</span>
+              <span><strong>Horas</strong><br>0h</span>
+              <span><strong>Combustível</strong><br>Gasolina</span>
+            </div>
+          </div>
+        </div>
       <button class="btn-nav right" onclick="scrollCarousel('carrossel-novos', 1)">&#10095;</button>
     </div>  
   </section>
+  <section id="novos" class="carrosel-barcos">
+  <div class="line"></div>
+  <h2>Jets | <span class="marca-fina">Outros</span></h2>
+  <div class="carrossel-container">
+    
+    <button class="btn-nav left" onclick="scrollCarousel('carrossel-jet', -1)">&#10094;</button>
+    
+    <div class="carrossel" id="carrossel-jet">
+
+      <div class="card-barco">
+        <img src="./assets/img/embarcacoes/3622/1 (1).jpeg" alt="SEADOO RXTX 300" />
+        <div class="info">
+          <p class="sku">SKU #3622</p>
+          <h3>SEADOO RXTX 300</h3>
+          <p class="motor">ROTAX 300</p>
+          <p class="preco">Sob consulta</p>
+          <div class="line-detalhes"></div>
+          <div class="detalhes">
+            <span><strong>Tamanho</strong><br>11 Pés</span>
+            <span><strong>Ano</strong><br>2022</span>
+            <span><strong>Horas</strong><br>40h</span>
+            <span><strong>Combustível</strong><br>Gasolina</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-barco">
+        <img src="./assets/img/embarcacoes/3586/1.jpeg" alt="Seadoo GTI SE 130" />
+        <div class="info">
+          <p class="sku">SKU #3586</p>
+          <h3>Seadoo GTI SE 130</h3>
+          <p class="motor">ROTAX 130</p>
+          <p class="preco">Sob consulta</p>
+          <div class="line-detalhes"></div>
+          <div class="detalhes">
+            <span><strong>Tamanho</strong><br>11 Pés</span>
+            <span><strong>Ano</strong><br>2014</span>
+            <span><strong>Horas</strong><br>106h</span>
+            <span><strong>Combustível</strong><br>Gasolina</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-barco">
+        <img src="./assets/img/embarcacoes/3680/1.jpeg" alt="JET YAMAHA SVHO 1800 GP" />
+        <div class="info">
+          <p class="sku">SKU #3680</p>
+          <h3>Yamaha VXR 1800cc</h3>
+          <p class="motor">Super Vortex 1800 Cc</p>
+          <p class="preco">Sob consulta</p>
+          <div class="line-detalhes"></div>
+          <div class="detalhes">
+            <span><strong>Tamanho</strong><br>11 Pés</span>
+            <span><strong>Ano</strong><br>2012</span>
+            <span><strong>Horas</strong><br>300h</span>
+            <span><strong>Combustível</strong><br>Gasolina</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-barco">
+        <img src="./assets/img/embarcacoes/3676/1.jpeg" alt="SEADOO RXTX 300" />
+        <div class="info">
+          <p class="sku">SKU #3676</p>
+          <h3>SEADOO spark 90 HP</h3>
+          <p class="motor">Rotax 900 HO ACE</p>
+          <p class="preco">Sob consulta</p>
+          <div class="line-detalhes"></div>
+          <div class="detalhes">
+            <span><strong>Tamanho</strong><br>11 Pés</span>
+            <span><strong>Ano</strong><br>2017</span>
+            <span><strong>Horas</strong><br>107h</span>
+            <span><strong>Combustível</strong><br>Gasolina</span>
+          </div>
+        </div>
+      </div>
+
+       <div class="card-barco">
+        <img src="./assets/img/embarcacoes/3678/1.jpeg" alt="SEADOO RXTX 300" />
+        <div class="info">
+          <p class="sku">SKU #3678</p>
+          <h3>Sea-Doo Spark Trixx</h3>
+          <p class="motor">90 HP 4 tempos</p>
+          <p class="preco">Sob consulta</p>
+          <div class="line-detalhes"></div>
+          <div class="detalhes">
+            <span><strong>Tamanho</strong><br>11 Pés</span>
+            <span><strong>Ano</strong><br>2022</span>
+            <span><strong>Horas</strong><br>53h</span>
+            <span><strong>Combustível</strong><br>Gasolina</span>
+          </div>
+        </div>
+      </div>
+
+      
+       <div class="card-barco">
+        <img src="./assets/img/embarcacoes/3682/1.jpeg" alt="SEADOO RXTX 300" />
+        <div class="info">
+          <p class="sku">SKU #3682</p>
+          <h3>Yamaha VX 1800 HO</h3>
+          <p class="motor">VX 1800 HP</p>
+          <p class="preco">Sob consulta</p>
+          <div class="line-detalhes"></div>
+          <div class="detalhes">
+            <span><strong>Tamanho</strong><br>11 Pés</span>
+            <span><strong>Ano</strong><br>2017</span>
+            <span><strong>Horas</strong><br>150h</span>
+            <span><strong>Combustível</strong><br>Gasolina</span>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <button class="btn-nav right" onclick="scrollCarousel('carrossel-jet', 1)">&#10095;</button>
+    
+  </div>
+</section>
   <div class="line"></div>
  <section id="sobre-nos" class="empresa">
       <div class="empresa-topo">
-        <div class="empresa-logo">
-          <img src="../assets/img/1-Logomarca VIP Azul.png" alt="Logo VIP Náutica" />
-        </div>
-        <div class="empresa-texto">
+    <div class="empresa-topo-grid">
+        <!-- COLUNA DA ESQUERDA -->
+        <div class="coluna-texto">
+          <img src="../assets/img/1-Logomarca VIP Azul.png" alt="Logo VIP Náutica" class="logo-empresa" />
+          <h2>Conheça nossa estrutura</h2>
           <p>
-            A VIP Náutica, é uma empresa dedicada à venda de lanchas, novas e semi novas, com mais de 25 anos de experiencia de mercado. Nosso objetivo é oferecer as melhores opcões , e   atender às diversas necessidades e estilos de vida de nossos clientes.
+            A VIP Náutica é uma empresa dedicada à venda de lanchas novas e seminovas, com mais de 25 anos de experiência no mercado. Nosso objetivo é oferecer as melhores opções e atender às diversas necessidades e estilos de vida de nossos clientes.
           </p>
         </div>
+
+        <!-- COLUNA DA DIREITA -->
+        <div class="coluna-video">
+          <div class="video-container">
+            <iframe 
+              src="https://www.youtube.com/embed/iwg6kyf3SB4"
+              title="Instalações VIP Náutica"
+              frameborder="0"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
       </div>
-    
       <div class="empresa-locais">
 
          <div class="card-local">
@@ -375,54 +657,95 @@
        
       </div>
     </section>
-  <footer id="contato" class="footer">
-    <div class="footer-container">
-      <!-- LOGO -->
-      <div class="footer-logo">
-        <img src="./assets/img/LOGOVIP.png" alt="Logo VIP Náutica" />
-      </div>
-  
-      <!-- INFOS -->
-      <div class="footer-info">
-        <div class="footer-line">
-          <img src="./assets/img/Shape.png" alt="Ícone Local" class="icon-img" />
-          <p>Av. Vereador José Diniz, 3707 – CJ 82/83</p>
-        </div>
-  
-        <div class="footer-line">
-          <img src="./assets/img/Rounded_1_.png" alt="Ícone Telefone" class="icon-img" />
-          <p>(11) 95494-0008</p>
-  
-          <img src="./assets/img/Shape (1).png" alt="Ícone Fax" class="icon-img" style="margin-left: 20px;" />
-          <p>(11) 2737-5050</p>
-        </div>
-  
-        <div class="footer-social">
-          <p>Social Media</p>
-          <div class="social-icons">
-            <img src="./assets/img/facebook black.1.png" alt="Facebook" />
-            <img src="/assets/img/Twitter.png" alt="Twitter" />
-            <img src="/assets/img/linkedin black.1.png" alt="LinkedIn" />
-            <img src="/assets/img/youtube color.1.png" alt="YouTube" />
-            <img src="/assets/img/instagram black.1.png" alt="Instagram" />
-            <img src="/assets/img/googleplus black.1.png" alt="Google Plus" />
-            <img src="/assets/img/pinterest color.1.png" alt="Pinterest" />
-            <img src="/assets/img/rss black.1.png" alt="RSS" />
+
+    <footer class="footer-custom">
+          <div class="container footer-content py-4">
+              
+              <div class="footer-top-section d-flex flex-column flex-md-row justify-content-between align-items-center w-100 mb-4 gap-3">
+                  <div class="footer-logo">
+                      <img src="./assets/img/LOGOVIP.png" alt="VIP Náutica Logo" class="img-fluid" style="max-height: 60px;">
+                  </div>
+
+                  <div class="social-icons d-flex gap-3 justify-content-center order-md-last">
+                      <a href="https://www.facebook.com/vipnautica/?locale=pt_BR" target="_blank" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                      <a href="https://www.instagram.com/vipnauticaoficial/" target="_blank" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                      <a href="https://wa.me/5511950010956" target="_blank" class="social-link whatsapp-link" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                  </div>
+              </div>
+
+              <div class="d-flex flex-column flex-md-row justify-content-between align-items-center w-100 gap-4">
+                  <div class="footer-links d-flex flex-wrap justify-content-center align-items-center">
+                      <a href="./pages/pp.html" class="footer-link">Política de Privacidade</a>
+                      <span class="separator">|</span>
+                      <a href="./pages/tc.html" class="footer-link">Termos de Uso</a>
+                  </div>
+
+                  <div class="footer-phones d-flex flex-column flex-md-row gap-3 text-white small text-center text-md-start">
+                      <span><i class="bi bi-telephone-fill me-2"></i> (11) 95001-0956</span>
+                      <span><i class="bi bi-telephone-fill me-2"></i> (11) 3737-5050</span>
+                      <span><i class="bi bi-telephone-fill me-2"></i> (11) 95494-0008</span>
+                  </div>
+              </div>
+              
+              <p class="mb-0 text-center text-md-start copyright mt-4">&copy; 2025 VIP Náutica. Todos os direitos reservados.</p>
+              <div class="container-fluid">
+                  <div class="row">
+                      <div class="col text-center">
+                          <p class="text-white-50 small mb-0 fw-light text-opacity-25 animated-zinkra animated-zinkra">Desenvolvido por <a href="https://zinkra.vercel.app/">Zinkra</a></p>
+                      </div>
+                  </div>
+              </div>
+</div>
+
+
           </div>
-        </div>
-      </div>
+      </footer>
+
+      <!-- Modal Instagram -->
+<div class="modal fade" id="modalInstagram" tabindex="-1" aria-labelledby="modalInstagramLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-0 border-0 bg-transparent">
+      <a href="https://www.instagram.com/vipnauticaoficial/" target="_blank">
+        <img src="./assets/img/modal instagram.webp" alt="Siga nosso Instagram" class="img-fluid w-100 rounded">
+      </a>
     </div>
-  
-    <!-- COPYRIGHT -->
-    <div class="footer-copy">
-      <p>Copyright © 2025 • VIP Náutica.</p>
-    </div>
-  </footer>
-  
+  </div>
+</div>
+      
   <a href="https://wa.me/5511950010956" class="whatsapp-fixo" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
   </a>
 
-  <script defer src="./assets/js/home.js"></script>
+    <!-- home.js -->
+    <script type="module" src="./assets/js/home.js"></script>
+
+
+    <!-- jQuery + Popper + Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Aqui vai o script que fecha o menu -->
+  <script>
+      const toggle = document.getElementById('menuToggle');
+      const menu = document.getElementById('navMenu');
+
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('open');
+      });
+
+      // Fecha o menu ao clicar em qualquer link
+      document.querySelectorAll('.nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('open');
+        });
+      });
+
+        $(document).ready(function () {
+    setTimeout(() => {
+      $('#modalInstagram').modal('show');
+    }, 1000); // Espera 1 segundo antes de exibir (ajuste se quiser)
+  });
+    </script>
 </body>
 </html>

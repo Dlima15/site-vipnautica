@@ -6,159 +6,123 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Anúncio embarcação</title>
    <link rel="stylesheet" href="../assets/css/anuncio.css">
-   <script src="/assets/js/anuncio.js"></script>
+   <script defer src="/assets/js/anuncio.js"></script>
    <link rel="icon" href="/assets/img/1-Logomarca VIP Azul copy.png" type="image/x-icon">
+
+   <!-- Google tag (gtag.js) Licenca Google - Dev Danilo Lima -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-967900075"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-967900075');
+   </script>
 </head>
 <body>
    <header>
       <a href="../index.html"><img src="../assets/img/LOGOVIP.png" alt="Logo VUIP Náutica" /></a>
-  
       <nav class="menu">
-        <ul>
-          <!-- <li><a href="#novos"><img src="./assets/img/icon header.svg" alt=""> Barcos Novos |</a></li> -->
-          <!-- <li><a href="#seminovos"><img src="./assets/img/icon header.svg" alt=""> Barcos Seminovos |</a></li> -->
-          <li><a href="#contato"><img src="/assets/img/email contato.svg" alt=""> Contato |</a></li>
-          <li><a href="#sobre-nos">Sobre nós</a></li>
-        </ul>
+         <ul>
+            <li><a href="#contato"><img src="/assets/img/email contato.svg" alt=""> Contato |</a></li>
+            <li><a href="#sobre-nos">Sobre nós</a></li>
+         </ul>
       </nav>
-  
       <div class="buttons-header">
-        <a class="bt-hd-1" href="https://wa.link/fpv4of">Venda sua Lancha!</a>
-        <a class="bt-hd-2" href="https://wa.link/6tl9hh">Fale conosco!</a>
+         <a class="bt-hd-1" href="https://wa.link/fpv4of">Venda sua Lancha!</a>
+         <a class="bt-hd-2" href="https://wa.link/6tl9hh">Fale conosco!</a>
       </div>
-    </header>
-    <section class="container-anuncio">
+   </header>
+
+   <section class="container-anuncio">
       <div class="anuncio">
-        <h1 id="titulo-barco">Nome da Embarcação</h1>
-    
-        <div class="carrossel-container">
-          <button class="btn-nav left" onclick="mudarFoto(-1)">&#10094;</button>
-          <img id="foto-barco" src="" alt="Foto da embarcação" class="foto-barco">
-          <button class="btn-nav right" onclick="mudarFoto(1)">&#10095;</button>
-          
-        </div>
-        <a href="https://wa.me/5511950010956" class="btn-consultar" target="_blank">Clique para consultar</a>
-        <span class="sku" id="sku"></span>
-    
-        <table class="info-barco">
-          <tr>
-            <th>Fabricante</th>
-            <td id="fabricante"></td>
-            <th>Modelo</th>
-            <td id="modelo"></td>
-            <th>Ano</th>
-            <td id="ano"></td>
-          </tr>
-          <tr>
-            <th>Tamanho</th>
-            <td id="tamanho"></td>
-            <th>Estilo</th>
-            <td id="estilo"></td>
-            <th>Combustível</th>
-            <td id="combustivel"></td>
-          </tr>
-          <tr>
-            <th>Motor</th>
-            <td id="motor"></td>
-            <th>Horas</th>
-            <td id="horas"></td>
-            <th>Valor</th>
-            <td class="preco" id="valor"></td>
-          </tr>
-        </table>
-    
-        <h2>Acessórios</h2>
-        <div class="acessorios" id="acessorios"></div>
-    
+         <h1 id="titulo-barco">Nome da Embarcação</h1>
+
+         <div class="carrossel-container">
+            <button class="btn-nav left" onclick="mudarFoto(-1)">&#10094;</button>
+            <img id="foto-barco" src="" alt="Foto da embarcação" class="foto-barco">
+            <button class="btn-nav right" onclick="mudarFoto(1)">&#10095;</button>
+         </div>
+
+         <!-- Miniaturas -->
+         <div class="miniaturas-container" id="miniaturas"></div>
+
+         <a href="https://wa.me/5511950010956" class="btn-consultar" target="_blank">Clique para consultar</a>
+         <span class="sku" id="sku"></span>
+
+         <table class="info-barco">
+            <tr>
+               <th>Fabricante</th>
+               <td id="fabricante"></td>
+               <th>Modelo</th>
+               <td id="modelo"></td>
+               <th>Ano</th>
+               <td id="ano"></td>
+            </tr>
+            <tr>
+               <th>Tamanho</th>
+               <td id="tamanho"></td>
+               <th>Estilo</th>
+               <td id="estilo"></td>
+               <th>Combustível</th>
+               <td id="combustivel"></td>
+            </tr>
+            <tr>
+               <th>Motor</th>
+               <td id="motor"></td>
+               <th>Horas</th>
+               <td id="horas"></td>
+               <th>Valor</th>
+               <td class="preco" id="valor"></td>
+            </tr>
+         </table>
+
+         <h2>Acessórios</h2>
+         <div class="acessorios" id="acessorios"></div>
       </div>
-    </section>
-    
+   </section>
+
    <section id="sobre-nos" class="empresa">
       <div class="empresa-topo">
-        <div class="empresa-logo">
-          <img src="../assets/img/1-Logomarca VIP Azul.png" alt="Logo VIP Náutica" />
-        </div>
-        <div class="empresa-texto">
-          <p>
-            A VIP Náutica, é uma empresa dedicada à venda de lanchas, novas e semi novas, com mais de 25 anos de experiencia de mercado. Nosso objetivo é oferecer as melhores opcões , e   atender às diversas necessidades e estilos de vida de nossos clientes.
-          </p>
-        </div>
-      </div>
-    
-      <div class="empresa-locais">
-
-         <div class="card-local">
-          <h3>VIP Náutica – São Paulo – Sp (Escritório)</h3>
-          <p>
-            <img src="../assets/img/local (1).png" alt="Localização" class="icon-local" />
-               Av. Vereador José Diniz,<br />
-            3707 – CJ 82/83
-          </p>
-          <img class="img-local-lugar" src="../assets/img/image (1).png" alt="São Paulo" />
-        </div>
-
-
-        <div class="card-local">
-          <h3>VIP Náutica – Guarujá – SP (Showroom)</h3>
-          <p>
-            <img src="../assets/img/local (1).png" alt="Localização" class="icon-local" />
-             R. Francesca Sapochetti Castrucci, 805<br />
-            Galpão 08
-          </p>
-          <img class="img-local-lugar" src="../assets/img/image.png" alt="Guarujá" />
-        </div>
-    
-       
-      </div>
-    </section>
-    <footer id="contato" class="footer">
-      <div class="footer-container">
-        <!-- LOGO -->
-        <div class="footer-logo">
-          <img src="../assets/img/LOGOVIP.png" alt="Logo VIP Náutica" />
-        </div>
-    
-        <!-- INFOS -->
-        <div class="footer-info">
-          <div class="footer-line">
-            <img src="../assets/img/Shape.png" alt="Ícone Local" class="icon-img" />
-            <p>Av. Vereador José Diniz, 3707 – CJ 82/83</p>
-          </div>
-    
-          <div class="footer-line">
-            <img src="../assets/img/Rounded_1_.png" alt="Ícone Telefone" class="icon-img" />
-            <p>(11) 95494-0008</p>
-    
-            <img src="../assets/img/Shape (1).png" alt="Ícone Fax" class="icon-img" style="margin-left: 20px;" />
-            <p>(11) 2737-5050</p>
-          </div>
-    
-          <div class="footer-social">
-            <p>Social Media</p>
-            <div class="social-icons">
-              <img src="../assets/img/facebook black.1.png" alt="Facebook" />
-              <img src="../assets/img/Twitter.png" alt="Twitter" />
-              <img src="../assets/img/linkedin black.1.png" alt="LinkedIn" />
-              <img src="../assets/img/youtube color.1.png" alt="YouTube" />
-              <img src="../assets/img/instagram black.1.png" alt="Instagram" />
-              <img src="../assets/img/googleplus black.1.png" alt="Google Plus" />
-              <img src="../assets/img/pinterest color.1.png" alt="Pinterest" />
-              <img src="../assets/img/rss black.1.png" alt="RSS" />
+         <div class="empresa-topo-grid">
+            <div class="coluna-texto">
+               <img src="../assets/img/1-Logomarca VIP Azul.png" alt="Logo VIP Náutica" class="logo-empresa" />
+               <h2>Conheça nossa estrutura</h2>
+               <p>A VIP Náutica é uma empresa dedicada à venda de lanchas novas e seminovas, com mais de 25 anos de experiência no mercado. Nosso objetivo é oferecer as melhores opções e atender às diversas necessidades e estilos de vida de nossos clientes.</p>
             </div>
-          </div>
-        </div>
+            <div class="coluna-video">
+               <div class="video-container">
+                  <iframe src="https://www.youtube.com/embed/iwg6kyf3SB4" title="Instalações VIP Náutica" frameborder="0" allowfullscreen></iframe>
+               </div>
+            </div>
+         </div>
+         <div class="empresa-locais">
+            <div class="card-local">
+               <h3>VIP Náutica – São Paulo – SP (Escritório)</h3>
+               <p><img src="../assets/img/local (1).png" alt="Localização" class="icon-local" /> Av. Vereador José Diniz,<br /> 3707 – CJ 82/83</p>
+               <img class="img-local-lugar" src="../assets/img/image (1).png" alt="São Paulo" />
+            </div>
+            <div class="card-local">
+               <h3>VIP Náutica – Guarujá – SP (Showroom)</h3>
+               <p><img src="../assets/img/local (1).png" alt="Localização" class="icon-local" /> R. Francesca Sapochetti Castrucci, 805<br /> Galpão 08</p>
+               <img class="img-local-lugar" src="../assets/img/image.png" alt="Guarujá" />
+            </div>
+         </div>
       </div>
-    
-      <!-- COPYRIGHT -->
-      <div class="footer-copy">
-        <p>Copyright © 2025 • VIP Náutica</p>
-      </div>
-    </footer>
+   </section>
 
-    <a href="https://wa.me/5511950010956" class="whatsapp-fixo" target="_blank">
+   <footer class="footer-simples">
+      <div class="footer-conteudo">
+         <p>&copy; 2025 VIP Náutica. Todos os direitos reservados.</p>
+         <div class="footer-links">
+            <a href="../pages/pp.html">Política de Privacidade</a>
+            <span class="separador">|</span>
+            <a href="../pages/tc.html">Termos de Uso</a>
+         </div>
+      </div>
+   </footer>
+
+   <a href="https://wa.me/5511950010956" class="whatsapp-fixo" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
-    </a>
-
-    <script defer src="/assets/js/anuncio.js"></script>
+   </a>
 </body>
 </html>
