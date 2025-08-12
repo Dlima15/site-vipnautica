@@ -1,225 +1,272 @@
-// JS da Página de Filtros
+// JS da Página de Filtros - Strapi v5
 console.log("filtro.js carregado");
 
 // --- Variáveis Globais ---
-let todasEmbarcacoes = []; // Armazena todos os dados do JSON
-let embarcacoesFiltradas = []; // Armazena as embarcações após aplicar filtros e ordenação
+let todasEmbarcacoes = [];
+let embarcacoesFiltradas = [];
 
-// --- Referências a Elementos do DOM ---
-const barcosContainer = document.getElementById('barcos-container');
-const fabricanteFilter = document.getElementById('fabricante-filter');
-const modeloFilter = document.getElementById('modelo-filter');
-const tamanhoFilter = document.getElementById('tamanho-filter');
-const anoFilter = document.getElementById('ano-filter');
+// --- DOM ---
+const barcosContainer   = document.getElementById('barcos-container');
+const fabricanteFilter  = document.getElementById('fabricante-filter');
+const modeloFilter      = document.getElementById('modelo-filter');
+const tamanhoFilter     = document.getElementById('tamanho-filter');
+const anoFilter         = document.getElementById('ano-filter');
 const combustivelFilter = document.getElementById('combustivel-filter');
-const limparFiltrosBtn = document.querySelector('.btn-limpar-filtros');
-const ordenarRadios = document.querySelectorAll('input[name="ordenar"]');
+const limparFiltrosBtn  = document.querySelector('.btn-limpar-filtros');
+const ordenarRadios     = document.querySelectorAll('input[name="ordenar"]');
 
-// --- Funcionalidade de Scroll Suave para Links Internos ---
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop - 80,
-                behavior: "smooth"
-            });
-        }
-    });
+// --- API ---
+const BASE_URL = 'https://hopeful-success-7ef5924c0b.strapiapp.com'; // produção
+const API = `${BASE_URL}/api/anuncios`;
+
+// Scroll suave (âncoras)
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener("click", (e) => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute("href"));
+    if (t) window.scrollTo({ top: t.offsetTop - 80, behavior: "smooth" });
+  });
 });
 
-// --- Função para Renderizar o Cabeçalho da Listagem ---
+// Cabeçalho da tabela
 function renderizarCabecalhoListagem() {
-    const headerHtml = `
-        <div class="listagem-header">
-            <span class="col-header"></span> <span class="col-header">Modelo</span>
-            <span class="col-header">Fabricante</span>
-            <span class="col-header">Tamanho</span>
-            <span class="col-header">Ano</span>
-            <span class="col-header">Motor</span>
-            <span class="col-header">Sku</span>
-        </div>
-    `;
-    barcosContainer.insertAdjacentHTML('afterbegin', headerHtml);
+  const headerHtml = `
+    <div class="listagem-header">
+      <span class="col-header"></span>
+      <span class="col-header">Modelo</span>
+      <span class="col-header">Fabricante</span>
+      <span class="col-header">Tamanho</span>
+      <span class="col-header">Ano</span>
+      <span class="col-header">Motor</span>
+      <span class="col-header">Sku</span>
+    </div>
+  `;
+  barcosContainer.insertAdjacentHTML('afterbegin', headerHtml);
 }
 
-// --- Função para Preencher os Selects de Filtro com Opções Dinâmicas ---
+// Preenche selects dos filtros
 function preencherOpcoesFiltro() {
-    const fabricantes = new Set();
-    const modelos = new Set();
-    const tamanhos = new Set();
-    const anos = new Set();
-    const combustiveis = new Set();
+  const fabricantes  = new Set();
+  const modelos      = new Set();
+  const tamanhos     = new Set();
+  const anos         = new Set();
+  const combustiveis = new Set();
 
-    todasEmbarcacoes.forEach(barco => {
-        fabricantes.add(barco.fabricante);
-        modelos.add(barco.modelo);
-        tamanhos.add(barco.tamanho);
-        anos.add(barco.ano);
-        combustiveis.add(barco.combustivel);
-    });
+  todasEmbarcacoes.forEach(b => {
+    if (b.fabricante)  fabricantes.add(b.fabricante);
+    if (b.modelo)      modelos.add(b.modelo);
+    if (b.tamanho)     tamanhos.add(b.tamanho);
+    if (b.ano)         anos.add(b.ano);
+    if (b.combustivel) combustiveis.add(b.combustivel);
+  });
 
-    const addOptions = (selectElement, optionsSet) => {
-        selectElement.innerHTML = '<option value="todos">Todos</option>';
-        Array.from(optionsSet).sort().forEach(option => {
-            const opt = document.createElement('option');
-            opt.value = option;
-            opt.textContent = option;
-            selectElement.appendChild(opt);
-        });
-    };
+  const add = (select, set) => {
+    select.innerHTML = '<option value="todos">Todos</option>';
+    Array.from(set)
+      .sort((a, b) => (''+a).localeCompare(''+b, 'pt-BR', { numeric: true }))
+      .forEach(opt => {
+        const o = document.createElement('option');
+        o.value = opt;
+        o.textContent = opt;
+        select.appendChild(o);
+      });
+  };
 
-    addOptions(fabricanteFilter, fabricantes);
-    addOptions(modeloFilter, modelos);
-    addOptions(tamanhoFilter, tamanhos);
-    addOptions(anoFilter, anos);
-    addOptions(combustivelFilter, combustiveis);
+  add(fabricanteFilter, fabricantes);
+  add(modeloFilter, modelos);
+  add(tamanhoFilter, tamanhos);
+  add(anoFilter, anos);
+  add(combustivelFilter, combustiveis);
 }
 
-// --- Função para Renderizar os Barcos na Tela ---
-function renderizarBarcos(barcosParaRenderizar) {
-    barcosContainer.innerHTML = '';
-    renderizarCabecalhoListagem();
+// Render cards/lista
+function renderizarBarcos(lista) {
+  barcosContainer.innerHTML = '';
+  renderizarCabecalhoListagem();
 
-    if (barcosParaRenderizar.length === 0) {
-        barcosContainer.innerHTML += '<p class="no-results">Nenhuma embarcação encontrada com os filtros aplicados.</p>';
-        return;
-    }
+  if (!lista.length) {
+    barcosContainer.innerHTML += '<p class="no-results">Nenhuma embarcação encontrada com os filtros aplicados.</p>';
+    return;
+  }
 
-    barcosParaRenderizar.forEach(barco => {
-        const barcoItem = document.createElement('a');
-        barcoItem.href = `anuncio.html?sku=${barco.sku}`;
-        barcoItem.classList.add('barco-item');
+  lista.forEach(barco => {
+    const a = document.createElement('a');
+    a.href = `anuncio.html?sku=${encodeURIComponent(barco.sku || '')}`;
+    a.classList.add('barco-item');
 
-        const fotoSrc = barco.fotos && barco.fotos.length > 0 ? barco.fotos[0] : './assets/img/embarcacoes/placeholder.jpeg';
+    const fotoSrc = (barco.fotos && barco.fotos.length)
+      ? barco.fotos[0]
+      : '../assets/img/embarcacoes/placeholder.jpeg';
 
-        barcoItem.innerHTML = `
-            <div class="barco-img">
-                <img src="${fotoSrc}" alt="${barco.anuncio}">
-            </div>
-            <span class="barco-info modelo">${barco.modelo}</span>
-            <span class="barco-info fabricante">${barco.fabricante}</span>
-            <span class="barco-info tamanho">${barco.tamanho}</span>
-            <span class="barco-info ano">${barco.ano}</span>
-            <span class="barco-info motor">${barco.motor}</span>
-            <span class="barco-info sku-btn">${barco.sku}</span>
-        `;
-        barcosContainer.appendChild(barcoItem);
-    });
+    a.innerHTML = `
+      <div class="barco-img">
+        <img src="${fotoSrc}" alt="${barco.anuncio ?? ''}">
+      </div>
+      <span class="barco-info modelo">${barco.modelo ?? ''}</span>
+      <span class="barco-info fabricante">${barco.fabricante ?? ''}</span>
+      <span class="barco-info tamanho">${barco.tamanho ?? ''}</span>
+      <span class="barco-info ano">${barco.ano ?? ''}</span>
+      <span class="barco-info motor">${barco.motor ?? ''}</span>
+      <span class="barco-info sku-btn">${barco.sku ?? ''}</span>
+    `;
+    barcosContainer.appendChild(a);
+  });
 }
 
-// --- Função para Aplicar Filtros e Ordenação ---
+// Aplicar filtros + ordenação
 function aplicarFiltrosEOrdenar() {
-    embarcacoesFiltradas = [...todasEmbarcacoes];
+  let lista = [...todasEmbarcacoes];
 
-    const filtroFabricante = fabricanteFilter.value;
-    const filtroModelo = modeloFilter.value;
-    const filtroTamanho = tamanhoFilter.value;
-    const filtroAno = anoFilter.value;
-    const filtroCombustivel = combustivelFilter.value;
+  const fFab  = fabricanteFilter.value;
+  const fMod  = modeloFilter.value;
+  const fTam  = tamanhoFilter.value;
+  const fAno  = anoFilter.value;
+  const fComb = combustivelFilter.value;
 
-    if (filtroFabricante !== 'todos') {
-        embarcacoesFiltradas = embarcacoesFiltradas.filter(barco => barco.fabricante === filtroFabricante);
+  if (fFab  !== 'todos') lista = lista.filter(b => b.fabricante  === fFab);
+  if (fMod  !== 'todos') lista = lista.filter(b => b.modelo      === fMod);
+  if (fTam  !== 'todos') lista = lista.filter(b => String(b.tamanho).replace('’','') === String(fTam).replace('’',''));
+  if (fAno  !== 'todos') lista = lista.filter(b => b.ano         === fAno);
+  if (fComb !== 'todos') lista = lista.filter(b => b.combustivel === fComb);
+
+  const ordenarPor = document.querySelector('input[name="ordenar"]:checked').value;
+  lista.sort((a, b) => {
+    let A, B;
+    switch (ordenarPor) {
+      case 'fabricante':
+        A = (a.fabricante||'').toLowerCase(); B = (b.fabricante||'').toLowerCase(); break;
+      case 'tamanho':
+        A = parseFloat(String(a.tamanho||'').replace('’',''))||0;
+        B = parseFloat(String(b.tamanho||'').replace('’',''))||0;
+        break;
+      case 'ano':
+        A = parseInt(a.ano)||0; B = parseInt(b.ano)||0; break;
+      case 'sku':
+        A = parseInt(a.sku)||0; B = parseInt(b.sku)||0; break;
+      default:
+        A = (a.fabricante||'').toLowerCase(); B = (b.fabricante||'').toLowerCase();
     }
-    if (filtroModelo !== 'todos') {
-        embarcacoesFiltradas = embarcacoesFiltradas.filter(barco => barco.modelo === filtroModelo);
-    }
-    if (filtroTamanho !== 'todos') {
-        embarcacoesFiltradas = embarcacoesFiltradas.filter(barco =>
-            String(barco.tamanho).replace('’', '') === String(filtroTamanho).replace('’', '')
-        );
-    }
-    if (filtroAno !== 'todos') {
-        embarcacoesFiltradas = embarcacoesFiltradas.filter(barco => barco.ano === filtroAno);
-    }
-    if (filtroCombustivel !== 'todos') {
-        embarcacoesFiltradas = embarcacoesFiltradas.filter(barco => barco.combustivel === filtroCombustivel);
-    }
+    return A < B ? -1 : A > B ? 1 : 0;
+  });
 
-    const ordenarPor = document.querySelector('input[name="ordenar"]:checked').value;
-
-    embarcacoesFiltradas.sort((a, b) => {
-        let valA, valB;
-
-        switch (ordenarPor) {
-            case 'fabricante':
-                valA = a.fabricante.toLowerCase();
-                valB = b.fabricante.toLowerCase();
-                break;
-            case 'tamanho':
-                valA = parseFloat(String(a.tamanho).replace('’', ''));
-                valB = parseFloat(String(b.tamanho).replace('’', ''));
-                break;
-            case 'ano':
-                valA = parseInt(a.ano);
-                valB = parseInt(b.ano);
-                break;
-            case 'sku':
-                valA = parseInt(a.sku);
-                valB = parseInt(b.sku);
-                break;
-            default:
-                valA = a.fabricante.toLowerCase();
-                valB = b.fabricante.toLowerCase();
-                break;
-        }
-
-        if (valA < valB) return -1;
-        if (valA > valB) return 1;
-        return 0;
-    });
-
-    renderizarBarcos(embarcacoesFiltradas);
-    mostrarToast(); // <-- Mostra o toast após renderizar
+  embarcacoesFiltradas = lista;
+  renderizarBarcos(lista);
+  mostrarToast();
 }
 
-// --- Event Listeners para os Filtros e Ordenação ---
-fabricanteFilter.addEventListener('change', aplicarFiltrosEOrdenar);
-modeloFilter.addEventListener('change', aplicarFiltrosEOrdenar);
-tamanhoFilter.addEventListener('change', aplicarFiltrosEOrdenar);
-anoFilter.addEventListener('change', aplicarFiltrosEOrdenar);
-combustivelFilter.addEventListener('change', aplicarFiltrosEOrdenar);
-
-ordenarRadios.forEach(radio => {
-    radio.addEventListener('change', aplicarFiltrosEOrdenar);
+// Listeners
+[fabricanteFilter, modeloFilter, tamanhoFilter, anoFilter, combustivelFilter].forEach(el => {
+  el.addEventListener('change', aplicarFiltrosEOrdenar);
 });
+ordenarRadios.forEach(r => r.addEventListener('change', aplicarFiltrosEOrdenar));
 
-// --- Event Listener para o Botão "Limpar filtros" ---
 limparFiltrosBtn.addEventListener('click', () => {
-    fabricanteFilter.value = 'todos';
-    modeloFilter.value = 'todos';
-    tamanhoFilter.value = 'todos';
-    anoFilter.value = 'todos';
-    combustivelFilter.value = 'todos';
-    document.querySelector('input[name="ordenar"][value="fabricante"]').checked = true;
-    aplicarFiltrosEOrdenar();
-    mostrarToast(); // <-- Também mostra o toast ao limpar
+  fabricanteFilter.value  = 'todos';
+  modeloFilter.value      = 'todos';
+  tamanhoFilter.value     = 'todos';
+  anoFilter.value         = 'todos';
+  combustivelFilter.value = 'todos';
+  document.querySelector('input[name="ordenar"][value="fabricante"]').checked = true;
+  aplicarFiltrosEOrdenar();
+  mostrarToast();
 });
 
-// --- Inicialização: Busca os Dados do JSON ao Carregar a Página ---
-fetch("../data/embarcacoes.json")
-    .then(res => res.json())
-    .then(dados => {
-        todasEmbarcacoes = Object.keys(dados).map(skuKey => {
-            return {
-                sku: skuKey,
-                ...dados[skuKey]
-            };
-        });
+// --- Util: URL absoluta para imagens ---
+function toAbs(url) {
+  if (!url) return '';
+  return url.startsWith('http') ? url : `${BASE_URL}${url.startsWith('/') ? '' : '/'}${url}`;
+}
 
-        preencherOpcoesFiltro();
-        aplicarFiltrosEOrdenar();
-    })
-    .catch(err => console.error("Erro ao carregar JSON:", err));
+// --- Util: monta URLs de imagens (v5 múltipla/single + fallback v4) ---
+function buildImageUrls(fotosField) {
+  if (!fotosField) return [];
 
-// --- Função para mostrar o toast ---
+  if (Array.isArray(fotosField)) {
+    return fotosField.map(f => {
+      const fmts = f?.formats || {};
+      const u = fmts.small?.url || fmts.medium?.url || fmts.thumbnail?.url || f?.url;
+      return toAbs(u);
+    }).filter(Boolean);
+  }
+
+  if (fotosField?.url) {
+    const fmts = fotosField?.formats || {};
+    const u = fmts.small?.url || fmts.medium?.url || fmts.thumbnail?.url || fotosField.url;
+    return [toAbs(u)];
+  }
+
+  if (fotosField?.data) {
+    return (fotosField.data || []).map(ff => {
+      const fa = ff?.attributes || ff;
+      const fmts = fa?.formats || {};
+      const u = fmts.small?.url || fmts.medium?.url || fmts.thumbnail?.url || fa?.url;
+      return toAbs(u);
+    }).filter(Boolean);
+  }
+
+  return [];
+}
+
+// Normalização (v5 chapado + fallback v4)
+function normalizeStrapiItem(item) {
+  const a = item?.attributes ? item.attributes : item;
+  return {
+    sku:         a?.sku ?? '',
+    fabricante:  a?.fabricante ?? '',
+    modelo:      a?.modelo ?? '',
+    tamanho:     a?.tamanho ?? '',
+    ano:         a?.ano ?? '',
+    estilo:      a?.estilo ?? '',
+    combustivel: a?.combustivel ?? '',
+    motor:       a?.motor ?? '',
+    horas:       a?.horas ?? 0,
+    valor:       a?.valor ?? '',
+    anuncio:     a?.anuncio ?? '',
+    fotos:       buildImageUrls(a?.fotos),
+    acessorios:  Array.isArray(a?.acessorios) ? a.acessorios : (a?.acessorios || []),
+  };
+}
+
+// ===== Carregar do Strapi v5 (com paginação) =====
+async function loadAllAnuncios() {
+  const pageSize = 100;
+  let page = 1, pageCount = 1;
+  const out = [];
+
+  do {
+    const params = new URLSearchParams();
+    params.set('pagination[page]', String(page));
+    params.set('pagination[pageSize]', String(pageSize));
+    params.set('populate', 'fotos');
+
+    const res = await fetch(`${API}?${params.toString()}`);
+    if (!res.ok) throw new Error(await res.text());
+
+    const json = await res.json();
+    (json.data || []).forEach(it => out.push(normalizeStrapiItem(it)));
+    pageCount = json?.meta?.pagination?.pageCount || 1;
+    page++;
+  } while (page <= pageCount);
+
+  return out;
+}
+
+// Boot
+(async () => {
+  try {
+    todasEmbarcacoes = await loadAllAnuncios();
+    preencherOpcoesFiltro();
+    aplicarFiltrosEOrdenar();
+  } catch (e) {
+    console.error('Erro ao carregar dados do Strapi:', e);
+    barcosContainer.innerHTML = '<p class="no-results">Erro ao carregar dados. Tente novamente.</p>';
+  }
+})();
+
+// Toast
 function mostrarToast() {
-    const toast = document.getElementById("filtro-toast");
-    if (!toast) return;
-
-    toast.classList.add("visivel");
-    setTimeout(() => {
-        toast.classList.remove("visivel");
-    }, 3000);
+  const toast = document.getElementById("filtro-toast");
+  if (!toast) return;
+  toast.classList.add("visivel");
+  setTimeout(() => toast.classList.remove("visivel"), 3000);
 }
