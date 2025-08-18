@@ -25,12 +25,21 @@ A nova versão do site trouxe um **grande salto de qualidade visual e funcional*
 - 🎨 Interface mais moderna e atrativa;  
 - 📱 Responsividade para todos os dispositivos;  
 - 🧩 Estrutura organizada e escalável;  
-- ⚡ Experiência de navegação mais fluida e profissional.
+- ⚡ Experiência de navegação mais fluida e profissional;  
+- 🗄️ **Banco de dados integrado**, garantindo persistência das informações;  
+- 🖥️ **Painel administrativo**, projetado para que pessoas sem conhecimento técnico possam **adicionar, editar ou remover anúncios com facilidade**.
 
-A proposta foi **aprovada pela empresa** e **o site já está no ar oficialmente**.  
-Todas as funcionalidades e atualizações estão sendo **desenvolvidas e mantidas ativamente por mim**, com melhorias frequentes tanto no site quanto no sistema interno.
+---
 
-Criei também uma **versão protegida** para fins de portfólio, com dados fictícios e visuais genéricos, respeitando a confidencialidade das informações reais da empresa.
+## 🔒 Versão de Portfólio
+
+Para preservar **dados sensíveis e a integridade do sistema em produção**, criei uma **versão duplicada do repositório**, adaptada exclusivamente para portfólio.  
+
+Essa versão mantém toda a estrutura do projeto, mas:  
+- ❌ Não possui painel administrativo;  
+- ❌ Não utiliza banco de dados em produção;  
+- ✅ Utiliza um **JSON local** dentro da própria base do projeto para simular os dados;  
+- ✅ Permite visualizar a experiência do site sem comprometer a confidencialidade da empresa.
 
 ---
 
@@ -45,21 +54,16 @@ Criei também uma **versão protegida** para fins de portfólio, com dados fict�
 🔗 **Versão protegida para portfólio (dados fictícios)**:  
 [https://site-vipnautica--eight.vercel.app/](https://site-vipnautica--eight.vercel.app/)
 
-🔗 **Site oficial da empresa (em produção)**:  
+🔗 **Site oficial da empresa (em atualização constante)**:  
 [https://www.vipnautica.com.br](https://www.vipnautica.com.br)
-
----
-
-## 🔒 Sistema Interno
-
-Além do site, desenvolvi também **um sistema exclusivo de controle de embarcações**, utilizado diariamente pela equipe da VIP Náutica.  
-Esse sistema gerencia processos operacionais internos e, por conter **informações sensíveis**, **não está disponível publicamente no GitHub**.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
 - HTML5 / CSS3 / JavaScript  
+- Banco de dados relacional  
+- Painel administrativo customizado (CRUD simplificado)  
 - Figma (para prototipação)  
 - Organização modular de código  
 - Boas práticas de UX/UI  
@@ -67,5 +71,13 @@ Esse sistema gerencia processos operacionais internos e, por conter **informaç�
 
 ---
 
-💙 **Desenvolvido com carinho, estratégia e muita proatividade por [Danilo Lima Cruz](https://github.com/dlima15)**
+## 📌 Case de Sucesso
+
+O site oficial da **VIP Náutica** conta hoje com um **banco de dados robusto** e um **painel administrativo intuitivo**, que permite à equipe gerenciar anúncios e informações de forma prática, mesmo sem conhecimento técnico.  
+
+Já a versão de portfólio foi criada para **preservar a confidencialidade dos dados reais**, utilizando apenas **JSON local** para simulação, sem painel administrativo e sem integração a banco de dados em produção.  
+
+---
+
+💙 **Desenvolvido com dedicação, estratégia e muita proatividade por [Danilo Lima Cruz](https://github.com/dlima15)**  
 # Site_VipNautica_oficial
