@@ -270,3 +270,106 @@ function mostrarToast() {
   toast.classList.add("visivel");
   setTimeout(() => toast.classList.remove("visivel"), 3000);
 }
+
+/* ===== LOADER OVERLAY (colar no FINAL do arquivo) ===== */
+(function () {
+  // CSS do loader (injetado via <style>)
+  const css = `
+  .tg-loader-overlay {
+    position: fixed; inset: 0; z-index: 9999;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(10,10,11,.9);
+    transition: opacity .25s ease, visibility .25s ease;
+  }
+  .tg-loader-overlay.tg-hide {
+    opacity: 0; visibility: hidden;
+  }
+  .tg-loader {
+    width: 56px; height: 56px; border-radius: 50%;
+    border: 6px solid rgba(255,255,255,.25);
+    border-top-color: #fff;
+    animation: tg-spin .9s linear infinite;
+  }
+  .tg-loader-text {
+    margin-top: 14px; color: #fff; font: 600 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    letter-spacing: .4px; text-transform: uppercase; text-align: center; opacity: .85;
+  }
+  @keyframes tg-spin { to { transform: rotate(360deg); } }
+  .tg-loader-wrap { display:flex; flex-direction:column; align-items:center; gap:4px; }
+  `;
+  const style = document.createElement('style');
+  style.textContent = css;
+  document.head.appendChild(style);
+
+  // Estrutura do overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'tg-loader-overlay';
+  overlay.innerHTML = `
+    <div class="tg-loader-wrap">
+      <div class="tg-loader" aria-hidden="true"></div>
+      <div class="tg-loader-text">Carregando…</div>
+    </div>
+  `;
+
+  // Anexa o overlay imediatamente
+  const ensureBody = () => (document.body ? Promise.resolve() : new Promise(r => document.addEventListener('DOMContentLoaded', r)));
+  ensureBody().then(() => document.body.appendChild(overlay));
+
+  // Helpers
+  function hideOverlaySmooth() {
+    // Evita esconder duas vezes
+    if (!overlay || overlay.classList.contains('tg-hide')) return;
+    overlay.classList.add('tg-hide');
+    // Remove do DOM após transição
+    setTimeout(() => overlay.remove(), 300);
+  }
+
+  function waitImagesToLoad(container) {
+    if (!container) return Promise.resolve();
+    const imgs = Array.from(container.querySelectorAll('img'));
+    if (imgs.length === 0) return Promise.resolve();
+    return Promise.all(
+      imgs.map(img => (
+        img.complete && img.naturalWidth > 0
+          ? Promise.resolve()
+          : new Promise(res => {
+              const done = () => { img.removeEventListener('load', done); img.removeEventListener('error', done); res(); };
+              img.addEventListener('load', done);
+              img.addEventListener('error', done);
+            })
+      ))
+    );
+  }
+
+  // Monkeypatch de renderizarBarcos para esconder o loader após render + imagens
+  const _renderizarBarcos = window.renderizarBarcos;
+  if (typeof _renderizarBarcos === 'function') {
+    window.renderizarBarcos = async function (...args) {
+      const result = _renderizarBarcos.apply(this, args);
+      try {
+        // Aguarda imagens do container antes de esconder
+        const container = document.getElementById('barcos-container');
+        await waitImagesToLoad(container);
+      } catch (_) { /* ignora */ }
+      hideOverlaySmooth();
+      return result;
+    };
+  } else {
+    // Fallback: se por algum motivo não acharmos a função, esconde depois de um tempo
+    setTimeout(hideOverlaySmooth, 3000);
+  }
+
+  // Em caso de erro global (promise não tratada / erro JS), escondemos o loader
+  window.addEventListener('unhandledrejection', hideOverlaySmooth);
+  window.addEventListener('error', hideOverlaySmooth, true);
+
+  // Opcional: ao clicar no botão "Limpar filtros", mostra um micro feedback de "loading"
+  const btn = document.querySelector('.btn-limpar-filtros');
+  if (btn) {
+    btn.addEventListener('click', () => {
+      // Mostra rapidamente (sem bloquear) para percepção de responsividade
+      overlay.classList.remove('tg-hide');
+      setTimeout(hideOverlaySmooth, 400);
+    });
+  }
+})();
